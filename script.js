@@ -27,39 +27,46 @@ document.addEventListener('mouseleave', () => {
     }
 });
 
-// Fireworks Function
+// Enhanced Fireworks Function
 function createFireworks(x, y) {
-    const particleCount = 50;
-    const colors = ['#00d4ff', '#ff006e', '#8338ec', '#ffd60a', '#ff006e'];
+    const particleCount = 150;
+    const colors = [
+        '#FF0000', '#FF7F00', '#FFFF00', '#00FF00', '#0000FF', '#4B0082', '#9400D3',
+        '#FF1493', '#00CED1', '#FFD700', '#00FF7F', '#FF69B4', '#1E90FF', '#32CD32',
+        '#FF4500', '#ADFF2F', '#00FA9A', '#FF00FF', '#0FF', '#87CEEB'
+    ];
 
     for (let i = 0; i < particleCount; i++) {
         const particle = document.createElement('div');
         particle.className = 'firework-particle';
+        
+        const color = colors[Math.floor(Math.random() * colors.length)];
+        const size = Math.random() * 6 + 3;
+        
         particle.style.cssText = `
             position: absolute;
-            width: 4px;
-            height: 4px;
+            width: ${size}px;
+            height: ${size}px;
             border-radius: 50%;
             pointer-events: none;
             z-index: 1000;
+            background: ${color};
+            box-shadow: 0 0 ${size + 5}px ${color}, 0 0 ${size + 10}px ${color};
+            filter: brightness(1.2);
         `;
-
-        const color = colors[Math.floor(Math.random() * colors.length)];
-        particle.style.background = color;
-        particle.style.left = x + 'px';
-        particle.style.top = y + 'px';
-        particle.style.boxShadow = `0 0 10px ${color}`;
 
         fireworksContainer.appendChild(particle);
 
-        // Random velocity
+        // Random velocity with more energy
+        const angle = (Math.random() * Math.PI * 2);
+        const speed = Math.random() * 8 + 4;
         const velocity = {
-            x: (Math.random() - 0.5) * 15,
-            y: (Math.random() - 0.5) * 15 - 5
+            x: Math.cos(angle) * speed,
+            y: Math.sin(angle) * speed - 3
         };
 
         let life = 1;
-        const decay = Math.random() * 0.015 + 0.01;
+        const decay = Math.random() * 0.012 + 0.008;
         let posX = x;
         let posY = y;
         let velocityY = velocity.y;
@@ -68,11 +75,15 @@ function createFireworks(x, y) {
             life -= decay;
             posX += velocity.x;
             posY += velocityY;
-            velocityY += 0.1; // gravity
+            velocityY += 0.15; // gravity
+            
+            // Add rotation effect
+            const rotation = Math.random() * 360;
 
             particle.style.left = posX + 'px';
             particle.style.top = posY + 'px';
             particle.style.opacity = life;
+            particle.style.transform = `rotate(${rotation}deg)`;
 
             if (life > 0) {
                 requestAnimationFrame(animate);
@@ -85,18 +96,29 @@ function createFireworks(x, y) {
     }
 }
 
-// Gift Button Click - Fireworks Burst
+// Gift Button Click - Enhanced Fireworks Burst
 if (giftBtn) {
     giftBtn.addEventListener('click', function(e) {
-        // Center burst
+        // Center burst - multiple calls for more particles
+        createFireworks(window.innerWidth / 2, window.innerHeight / 2);
         createFireworks(window.innerWidth / 2, window.innerHeight / 2);
 
-        // Multiple bursts around
-        setTimeout(() => createFireworks(window.innerWidth / 3, window.innerHeight / 3), 100);
-        setTimeout(() => createFireworks((window.innerWidth * 2) / 3, window.innerHeight / 3), 150);
-        setTimeout(() => createFireworks(window.innerWidth / 4, (window.innerHeight * 2) / 3), 200);
-        setTimeout(() => createFireworks((window.innerWidth * 3) / 4, (window.innerHeight * 2) / 3), 250);
-        setTimeout(() => createFireworks(window.innerWidth / 2, window.innerHeight * 0.7), 300);
+        // Multiple bursts around in circle pattern
+        const positions = [
+            { x: window.innerWidth / 3, y: window.innerHeight / 3, time: 50 },
+            { x: (window.innerWidth * 2) / 3, y: window.innerHeight / 3, time: 100 },
+            { x: window.innerWidth / 4, y: (window.innerHeight * 2) / 3, time: 150 },
+            { x: (window.innerWidth * 3) / 4, y: (window.innerHeight * 2) / 3, time: 200 },
+            { x: window.innerWidth / 2, y: window.innerHeight * 0.7, time: 250 },
+            { x: window.innerWidth * 0.8, y: window.innerHeight * 0.3, time: 300 },
+            { x: window.innerWidth * 0.2, y: window.innerHeight * 0.6, time: 350 }
+        ];
+
+        positions.forEach(pos => {
+            setTimeout(() => {
+                createFireworks(pos.x, pos.y);
+            }, pos.time);
+        });
 
         // Button ripple effect
         const ripple = document.createElement('span');
@@ -194,9 +216,24 @@ if (messageForm) {
     });
 }
 
-// Dynamic background particle movement on interaction
+// Dynamic background particle movement on interaction - Enhanced
 document.addEventListener('click', (e) => {
+    // Check if clicking on a button or input
+    if (e.target.tagName === 'BUTTON' || e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
+        return;
+    }
+    
+    // Create main burst at click location
     createFireworks(e.clientX, e.clientY);
+    
+    // Create 3 additional bursts around the click point for more visual impact
+    setTimeout(() => {
+        createFireworks(e.clientX + 50, e.clientY - 50);
+    }, 50);
+    
+    setTimeout(() => {
+        createFireworks(e.clientX - 50, e.clientY + 50);
+    }, 100);
 });
 
 // Initialize on load
