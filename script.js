@@ -28,6 +28,31 @@ document.addEventListener('mouseleave', () => {
 });
 
 // Optimized Fireworks Function
+// Twinkling Stars Background
+function createStars(count = 60) {
+    // Remove old stars if any
+    document.querySelectorAll('.star').forEach(e => e.remove());
+    for (let i = 0; i < count; i++) {
+        const star = document.createElement('div');
+        star.className = 'star';
+        const size = Math.random() * 2.5 + 1.5;
+        star.style.width = `${size}px`;
+        star.style.height = `${size}px`;
+        star.style.left = `${Math.random() * 100}vw`;
+        star.style.top = `${Math.random() * 100}vh`;
+        // Colorful glow
+        const colors = ['#fff', '#ffe082', '#b388ff', '#80d8ff', '#ff8a80', '#ffd740', '#69f0ae', '#ea80fc'];
+        const color = colors[Math.floor(Math.random() * colors.length)];
+        star.style.background = color;
+        star.style.boxShadow = `0 0 8px 2px ${color}, 0 0 18px 6px ${color}55`;
+        star.style.animationDelay = `${Math.random() * 2.5}s`;
+        document.body.appendChild(star);
+    }
+}
+
+// Create stars on load and on resize
+window.addEventListener('DOMContentLoaded', () => createStars(60));
+window.addEventListener('resize', () => createStars(60));
 function createFireworks(x, y) {
     const particleCount = 36;
     const colors = [

@@ -16,6 +16,42 @@
     --shadow: rgba(0, 0, 0, 0.55);
 }
 
+/* Animated Gradient & Twinkling Stars Background */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 0;
+    pointer-events: none;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(120deg, #ff5f6d 0%, #ffc371 25%, #47e7fa 50%, #845ec2 75%, #ff5f6d 100%);
+    background-size: 300% 300%;
+    animation: animated-gradient-bg 18s ease-in-out infinite;
+    opacity: 0.85;
+}
+
+@keyframes animated-gradient-bg {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.star {
+    position: fixed;
+    border-radius: 50%;
+    background: white;
+    opacity: 0.7;
+    pointer-events: none;
+    z-index: 1;
+    animation: twinkle 2.5s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.7; filter: blur(0.5px); }
+    50% { opacity: 1; filter: blur(2px); }
+}
+
 /* Sparkling Animated Background */
 .background {
     position: fixed;
