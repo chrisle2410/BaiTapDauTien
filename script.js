@@ -29,68 +29,51 @@ document.addEventListener('mouseleave', () => {
 
 // Optimized Fireworks Function
 function createFireworks(x, y) {
-    const particleCount = 80;
+    const particleCount = 36;
     const colors = [
-        '#FF0000', '#FF4500', '#FFD700', '#FFFF00', '#FF1493', '#FF69B4',
-        '#00FF7F', '#00CED1', '#1E90FF', '#9370DB', '#FF6347', '#FFA500',
-        '#DC143C', '#FF00FF', '#00FFFF', '#ADFF2F', '#FF8C00', '#FF0000'
+        '#FF0000', '#FF4500', '#FFD700', '#00FF7F', '#00CED1', '#1E90FF', '#FF69B4', '#ADFF2F', '#FF8C00', '#FF00FF', '#00FFFF', '#FFA500'
     ];
-
     const angleStep = (Math.PI * 2) / particleCount;
-
     for (let i = 0; i < particleCount; i++) {
         const particle = document.createElement('div');
         particle.className = 'firework-particle';
         const color = colors[Math.floor(Math.random() * colors.length)];
-        const size = Math.random() * 8 + 6;
-        const angle = i * angleStep + (Math.random() * 0.3 - 0.15);
-        const radius = Math.random() * 120 + 80;
-
+        const size = Math.random() * 7 + 5;
+        const angle = i * angleStep + (Math.random() * 0.2 - 0.1);
+        const radius = Math.random() * 90 + 60;
         const targetX = x + Math.cos(angle) * radius;
         const targetY = y + Math.sin(angle) * radius;
-
         particle.style.width = `${size}px`;
         particle.style.height = `${size}px`;
-        particle.style.background = `radial-gradient(circle, ${color}, ${color}80, transparent)`;
-        particle.style.boxShadow = `
-            0 0 ${size * 2}px ${color},
-            0 0 ${size * 3}px ${color}80,
-            0 0 ${size * 4}px ${color}40,
-            inset 0 0 ${size}px rgba(255, 255, 255, 0.8)
-        `;
+        particle.style.background = `radial-gradient(circle, ${color}, ${color}99, transparent)`;
+        particle.style.boxShadow = `0 0 ${size * 2}px ${color}, 0 0 ${size * 3}px ${color}99`;
         particle.style.left = `${x}px`;
         particle.style.top = `${y}px`;
-        particle.style.transform = 'translate(0, 0) scale(0.1) rotate(0deg)';
-        particle.style.animation = `particle-burst ${0.8 + Math.random() * 0.4}s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards`;
-
+        particle.style.transform = 'translate(0, 0) scale(0.1)';
+        particle.style.animation = `particle-burst ${0.7 + Math.random() * 0.2}s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards`;
         fireworksContainer.appendChild(particle);
-
         requestAnimationFrame(() => {
-            particle.style.transform = `translate(${targetX - x}px, ${targetY - y}px) scale(1) rotate(${Math.random() * 360}deg)`;
+            particle.style.transform = `translate(${targetX - x}px, ${targetY - y}px) scale(1)`;
         });
-
         particle.addEventListener('animationend', () => particle.remove());
     }
-
-    // Add sparkle trail effect
-    for (let i = 0; i < 15; i++) {
+    // Add sparkle trail effect (fewer sparkles)
+    for (let i = 0; i < 6; i++) {
         setTimeout(() => {
             const sparkle = document.createElement('div');
             sparkle.className = 'firework-particle';
             const sparkleColor = colors[Math.floor(Math.random() * colors.length)];
-            const sparkleSize = Math.random() * 4 + 2;
-
+            const sparkleSize = Math.random() * 3 + 2;
             sparkle.style.width = `${sparkleSize}px`;
             sparkle.style.height = `${sparkleSize}px`;
             sparkle.style.background = sparkleColor;
-            sparkle.style.boxShadow = `0 0 ${sparkleSize * 3}px ${sparkleColor}`;
-            sparkle.style.left = `${x + (Math.random() - 0.5) * 200}px`;
-            sparkle.style.top = `${y + (Math.random() - 0.5) * 200}px`;
-            sparkle.style.animation = `particle-burst ${0.3 + Math.random() * 0.3}s ease-out forwards`;
-
+            sparkle.style.boxShadow = `0 0 ${sparkleSize * 2.5}px ${sparkleColor}`;
+            sparkle.style.left = `${x + (Math.random() - 0.5) * 120}px`;
+            sparkle.style.top = `${y + (Math.random() - 0.5) * 120}px`;
+            sparkle.style.animation = `particle-burst ${0.25 + Math.random() * 0.15}s ease-out forwards`;
             fireworksContainer.appendChild(sparkle);
             sparkle.addEventListener('animationend', () => sparkle.remove());
-        }, i * 50);
+        }, i * 40);
     }
 }
 
