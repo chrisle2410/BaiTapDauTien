@@ -9,13 +9,13 @@ document.addEventListener('mousemove', (e) => {
         const rect = profileCard.getBoundingClientRect();
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
-        
+
         const centerX = rect.width / 2;
         const centerY = rect.height / 2;
-        
+
         const rotateX = (y - centerY) / 10;
         const rotateY = (centerX - x) / 10;
-        
+
         profileCard.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
     }
 });
@@ -31,48 +31,56 @@ document.addEventListener('mouseleave', () => {
 function createFireworks(x, y) {
     const particleCount = 50;
     const colors = ['#00d4ff', '#ff006e', '#8338ec', '#ffd60a', '#ff006e'];
-    
+
     for (let i = 0; i < particleCount; i++) {
         const particle = document.createElement('div');
         particle.className = 'firework-particle';
-        
+        particle.style.cssText = `
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 1000;
+        `;
+
         const color = colors[Math.floor(Math.random() * colors.length)];
         particle.style.background = color;
         particle.style.left = x + 'px';
         particle.style.top = y + 'px';
         particle.style.boxShadow = `0 0 10px ${color}`;
-        
+
         fireworksContainer.appendChild(particle);
-        
+
         // Random velocity
         const velocity = {
             x: (Math.random() - 0.5) * 15,
             y: (Math.random() - 0.5) * 15 - 5
         };
-        
+
         let life = 1;
         const decay = Math.random() * 0.015 + 0.01;
         let posX = x;
         let posY = y;
         let velocityY = velocity.y;
-        
+
         const animate = () => {
             life -= decay;
             posX += velocity.x;
             posY += velocityY;
             velocityY += 0.1; // gravity
-            
+
             particle.style.left = posX + 'px';
             particle.style.top = posY + 'px';
             particle.style.opacity = life;
-            
+
             if (life > 0) {
                 requestAnimationFrame(animate);
             } else {
                 particle.remove();
             }
         };
-        
+
         animate();
     }
 }
@@ -82,46 +90,46 @@ if (giftBtn) {
     giftBtn.addEventListener('click', function(e) {
         // Center burst
         createFireworks(window.innerWidth / 2, window.innerHeight / 2);
-        
+
         // Multiple bursts around
         setTimeout(() => createFireworks(window.innerWidth / 3, window.innerHeight / 3), 100);
         setTimeout(() => createFireworks((window.innerWidth * 2) / 3, window.innerHeight / 3), 150);
         setTimeout(() => createFireworks(window.innerWidth / 4, (window.innerHeight * 2) / 3), 200);
         setTimeout(() => createFireworks((window.innerWidth * 3) / 4, (window.innerHeight * 2) / 3), 250);
         setTimeout(() => createFireworks(window.innerWidth / 2, window.innerHeight * 0.7), 300);
-        
+
         // Button ripple effect
         const ripple = document.createElement('span');
         ripple.className = 'ripple';
         ripple.style.left = (e.clientX - giftBtn.getBoundingClientRect().left) + 'px';
         ripple.style.top = (e.clientY - giftBtn.getBoundingClientRect().top) + 'px';
         giftBtn.appendChild(ripple);
-        
-        // Remove ripple after animation
+
         setTimeout(() => ripple.remove(), 600);
-        
+
         // Play sound effect (optional - using Web Audio API)
         playSound();
     });
 }
+
 // Simple Sound Effect
 function playSound() {
     try {
         const audioContext = new (window.AudioContext || window.webkitAudioContext)();
         const now = audioContext.currentTime;
-        
+
         // Create multiple beeps
         for (let i = 0; i < 3; i++) {
             const osc = audioContext.createOscillator();
             const gain = audioContext.createGain();
-            
+
             osc.connect(gain);
             gain.connect(audioContext.destination);
-            
+
             osc.frequency.value = 800 + i * 200;
             gain.gain.setValueAtTime(0.3, now + i * 0.1);
             gain.gain.exponentialRampToValueAtTime(0.01, now + i * 0.1 + 0.1);
-            
+
             osc.start(now + i * 0.1);
             osc.stop(now + i * 0.1 + 0.1);
         }
@@ -155,22 +163,22 @@ const messageForm = document.getElementById('messageForm');
 if (messageForm) {
     messageForm.addEventListener('submit', async function(e) {
         e.preventDefault();
-        
+
         const senderName = document.getElementById('senderName').value.trim();
         const messageText = document.getElementById('messageText').value.trim();
-        
+
         if (senderName && messageText) {
             const botToken = '8651222676:AAF1R01M4RNFnYfnIUBmfr_8HNA2UN_CoiE';
             const chatId = '5870150798'; // Chat ID của bạn
             const text = `Thời gian: ${new Date().toLocaleString('vi-VN')}\nTừ: ${senderName}\nNội dung: ${messageText}`;
-            
+
             try {
                 const response = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ chat_id: chatId, text: text })
                 });
-                
+
                 if (response.ok) {
                     alert('Tin nhắn đã gửi thành công vào Telegram!');
                     this.reset();
