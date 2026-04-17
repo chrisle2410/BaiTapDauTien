@@ -498,6 +498,137 @@ body {
         font-size: 0.9rem;
     }
 }
+
+/* Play Game Button */
+.play-game-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    margin-top: 20px;
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+    border: none;
+    border-radius: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
+.play-game-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.5);
+}
+
+.play-game-btn i {
+    margin-right: 8px;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background: var(--glass-bg);
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #fff;
+}
+
+/* Sudoku Grid */
+#sudokuGrid {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 1px;
+    margin: 20px 0;
+    background: #000;
+    border: 2px solid #000;
+}
+
+.sudoku-cell {
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.sudoku-cell:hover {
+    background: #f0f0f0;
+}
+
+.sudoku-cell.fixed {
+    background: #e0e0e0;
+    font-weight: bold;
+    color: #333;
+}
+
+.sudoku-cell.error {
+    background: #ffcccc;
+}
+
+/* Game Controls */
+#gameControls {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#gameControls button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#gameControls button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 212, 255, 0.4);
+}
+
+#message {
+    margin-top: 10px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
     object-fit: cover;
     box-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
     transition: all 0.3s ease;

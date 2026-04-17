@@ -212,3 +212,154 @@ window.addEventListener('scroll', () => {
         profileCard.style.transform = `perspective(1000px) translateZ(${Math.min(scrollY / 10, 50)}px)`;
     }
 });
+
+// Game Modal Logic
+const playGameBtn = document.getElementById('playGameBtn');
+const gameModal = document.getElementById('gameModal');
+const closeModal = document.getElementById('closeModal');
+const sudokuGrid = document.getElementById('sudokuGrid');
+const newGameBtn = document.getElementById('newGameBtn');
+const checkBtn = document.getElementById('checkBtn');
+const messageDiv = document.getElementById('message');
+
+let sudokuBoard = [];
+let fixedCells = [];
+
+// Open modal
+playGameBtn.addEventListener('click', () => {
+    gameModal.style.display = 'block';
+    generateSudoku();
+});
+
+// Close modal
+closeModal.addEventListener('click', () => {
+    gameModal.style.display = 'none';
+});
+
+// Close modal when clicking outside
+window.addEventListener('click', (e) => {
+    if (e.target === gameModal) {
+        gameModal.style.display = 'none';
+    }
+});
+
+// New game
+newGameBtn.addEventListener('click', generateSudoku);
+
+// Check solution
+checkBtn.addEventListener('click', checkSolution);
+
+// Generate Sudoku
+function generateSudoku() {
+    // Simple Sudoku generator - create a basic puzzle
+    sudokuBoard = [
+        [5, 3, 0, 0, 7, 0, 0, 0, 0],
+        [6, 0, 0, 1, 9, 5, 0, 0, 0],
+        [0, 9, 8, 0, 0, 0, 0, 6, 0],
+        [8, 0, 0, 0, 6, 0, 0, 0, 3],
+        [4, 0, 0, 8, 0, 3, 0, 0, 1],
+        [7, 0, 0, 0, 2, 0, 0, 0, 6],
+        [0, 6, 0, 0, 0, 0, 2, 8, 0],
+        [0, 0, 0, 4, 1, 9, 0, 0, 5],
+        [0, 0, 0, 0, 8, 0, 0, 7, 9]
+    ];
+
+    fixedCells = [];
+    for (let i = 0; i < 9; i++) {
+        for (let j = 0; j < 9; j++) {
+            if (sudokuBoard[i][j] !== 0) {
+                fixedCells.push([i, j]);
+            }
+        }
+    }
+
+    renderGrid();
+    messageDiv.textContent = '';
+}
+
+// Render grid
+function renderGrid() {
+    sudokuGrid.innerHTML = '';
+    for (let i = 0; i < 9; i++) {
+        for (let j = 0; j < 9; j++) {
+            const cell = document.createElement('div');
+            cell.className = 'sudoku-cell';
+            cell.dataset.row = i;
+            cell.dataset.col = j;
+
+            if (sudokuBoard[i][j] !== 0) {
+                cell.textContent = sudokuBoard[i][j];
+                cell.classList.add('fixed');
+            } else {
+                cell.addEventListener('click', () => selectCell(cell));
+            }
+
+            sudokuGrid.appendChild(cell);
+        }
+    }
+}
+
+// Select cell
+function selectCell(cell) {
+    const row = parseInt(cell.dataset.row);
+    const col = parseInt(cell.dataset.col);
+
+    const num = prompt('Nhập số (1-9):');
+    if (num && num >= 1 && num <= 9) {
+        sudokuBoard[row][col] = parseInt(num);
+        cell.textContent = num;
+        cell.classList.remove('error');
+    }
+}
+
+// Check solution
+function checkSolution() {
+    let isValid = true;
+    const cells = document.querySelectorAll('.sudoku-cell');
+
+    cells.forEach(cell => {
+        cell.classList.remove('error');
+    });
+
+    // Check rows, columns, and 3x3 boxes
+    for (let i = 0; i < 9; i++) {
+        const row = [];
+        const col = [];
+        for (let j = 0; j < 9; j++) {
+            row.push(sudokuBoard[i][j]);
+            col.push(sudokuBoard[j][i]);
+        }
+        if (!isValidSet(row) || !isValidSet(col)) {
+            isValid = false;
+        }
+    }
+
+    // Check 3x3 boxes
+    for (let box = 0; box < 9; box++) {
+        const boxCells = [];
+        const startRow = Math.floor(box / 3) * 3;
+        const startCol = (box % 3) * 3;
+        for (let i = 0; i < 3; i++) {
+            for (let j = 0; j < 3; j++) {
+                boxCells.push(sudokuBoard[startRow + i][startCol + j]);
+            }
+        }
+        if (!isValidSet(boxCells)) {
+            isValid = false;
+        }
+    }
+
+    if (isValid) {
+        messageDiv.textContent = 'Chúc mừng! Bạn đã hoàn thành Sudoku!';
+        messageDiv.style.color = 'green';
+    } else {
+        messageDiv.textContent = 'Có lỗi! Hãy kiểm tra lại.';
+        messageDiv.style.color = 'red';
+    }
+}
+
+// Check if set is valid (no duplicates, 1-9)
+function isValidSet(arr) {
+    const filtered = arr.filter(n => n !== 0);
+    return filtered.length === new Set(filtered).size && filtered.every(n => n >= 1 && n <= 9);
+}
