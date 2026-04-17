@@ -217,18 +217,23 @@ window.addEventListener('scroll', () => {
 const playGameBtn = document.getElementById('playGameBtn');
 const gameModal = document.getElementById('gameModal');
 const closeModal = document.getElementById('closeModal');
-const sudokuGrid = document.getElementById('sudokuGrid');
+const memoryGrid = document.getElementById('memoryGrid');
 const newGameBtn = document.getElementById('newGameBtn');
-const checkBtn = document.getElementById('checkBtn');
 const messageDiv = document.getElementById('message');
+const movesDisplay = document.getElementById('moves');
+const matchedDisplay = document.getElementById('matched');
 
-let sudokuBoard = [];
-let fixedCells = [];
+const animals = ['🐱', '🐶', '🐭', '🐹', '🐰', '🦊', '🐻', '🐼'];
+let gameCards = [];
+let flipped = [];
+let matched = 0;
+let moves = 0;
+let isChecking = false;
 
 // Open modal
 playGameBtn.addEventListener('click', () => {
     gameModal.style.display = 'block';
-    generateSudoku();
+    initializeGame();
 });
 
 // Close modal
@@ -244,122 +249,91 @@ window.addEventListener('click', (e) => {
 });
 
 // New game
-newGameBtn.addEventListener('click', generateSudoku);
+newGameBtn.addEventListener('click', initializeGame);
 
-// Check solution
-checkBtn.addEventListener('click', checkSolution);
-
-// Generate Sudoku
-function generateSudoku() {
-    // Simple Sudoku generator - create a basic puzzle
-    sudokuBoard = [
-        [5, 3, 0, 0, 7, 0, 0, 0, 0],
-        [6, 0, 0, 1, 9, 5, 0, 0, 0],
-        [0, 9, 8, 0, 0, 0, 0, 6, 0],
-        [8, 0, 0, 0, 6, 0, 0, 0, 3],
-        [4, 0, 0, 8, 0, 3, 0, 0, 1],
-        [7, 0, 0, 0, 2, 0, 0, 0, 6],
-        [0, 6, 0, 0, 0, 0, 2, 8, 0],
-        [0, 0, 0, 4, 1, 9, 0, 0, 5],
-        [0, 0, 0, 0, 8, 0, 0, 7, 9]
-    ];
-
-    fixedCells = [];
-    for (let i = 0; i < 9; i++) {
-        for (let j = 0; j < 9; j++) {
-            if (sudokuBoard[i][j] !== 0) {
-                fixedCells.push([i, j]);
-            }
-        }
-    }
-
-    renderGrid();
+// Initialize game
+function initializeGame() {
+    gameCards = [];
+    flipped = [];
+    matched = 0;
+    moves = 0;
+    isChecking = false;
     messageDiv.textContent = '';
+    movesDisplay.textContent = '0';
+    matchedDisplay.textContent = '0';
+
+    // Create pairs
+    const pairs = [...animals, ...animals];
+    pairs.sort(() => Math.random() - 0.5);
+
+    gameCards = pairs.map((animal, index) => ({
+        id: index,
+        animal: animal,
+        flipped: false,
+        matched: false
+    }));
+
+    renderMemoryGrid();
 }
 
-// Render grid
-function renderGrid() {
-    sudokuGrid.innerHTML = '';
-    for (let i = 0; i < 9; i++) {
-        for (let j = 0; j < 9; j++) {
-            const cell = document.createElement('div');
-            cell.className = 'sudoku-cell';
-            cell.dataset.row = i;
-            cell.dataset.col = j;
+// Render memory grid
+function renderMemoryGrid() {
+    memoryGrid.innerHTML = '';
+    gameCards.forEach(card => {
+        const cardEl = document.createElement('div');
+        cardEl.className = 'memory-card';
+        cardEl.textContent = card.flipped || card.matched ? card.animal : '?';
+        cardEl.style.cursor = card.matched ? 'default' : 'pointer';
 
-            if (sudokuBoard[i][j] !== 0) {
-                cell.textContent = sudokuBoard[i][j];
-                cell.classList.add('fixed');
-            } else {
-                cell.addEventListener('click', () => selectCell(cell));
-            }
+        if (card.flipped) cardEl.classList.add('flipped');
+        if (card.matched) cardEl.classList.add('matched');
 
-            sudokuGrid.appendChild(cell);
-        }
-    }
-}
-
-// Select cell
-function selectCell(cell) {
-    const row = parseInt(cell.dataset.row);
-    const col = parseInt(cell.dataset.col);
-
-    const num = prompt('Nhập số (1-9):');
-    if (num && num >= 1 && num <= 9) {
-        sudokuBoard[row][col] = parseInt(num);
-        cell.textContent = num;
-        cell.classList.remove('error');
-    }
-}
-
-// Check solution
-function checkSolution() {
-    let isValid = true;
-    const cells = document.querySelectorAll('.sudoku-cell');
-
-    cells.forEach(cell => {
-        cell.classList.remove('error');
+        cardEl.addEventListener('click', () => flipCard(card, cardEl));
+        memoryGrid.appendChild(cardEl);
     });
+}
 
-    // Check rows, columns, and 3x3 boxes
-    for (let i = 0; i < 9; i++) {
-        const row = [];
-        const col = [];
-        for (let j = 0; j < 9; j++) {
-            row.push(sudokuBoard[i][j]);
-            col.push(sudokuBoard[j][i]);
-        }
-        if (!isValidSet(row) || !isValidSet(col)) {
-            isValid = false;
-        }
-    }
+// Flip card
+function flipCard(card, cardEl) {
+    if (isChecking || card.flipped || card.matched) return;
 
-    // Check 3x3 boxes
-    for (let box = 0; box < 9; box++) {
-        const boxCells = [];
-        const startRow = Math.floor(box / 3) * 3;
-        const startCol = (box % 3) * 3;
-        for (let i = 0; i < 3; i++) {
-            for (let j = 0; j < 3; j++) {
-                boxCells.push(sudokuBoard[startRow + i][startCol + j]);
-            }
-        }
-        if (!isValidSet(boxCells)) {
-            isValid = false;
-        }
-    }
+    card.flipped = true;
+    cardEl.textContent = card.animal;
+    cardEl.classList.add('flipped');
+    flipped.push(card);
 
-    if (isValid) {
-        messageDiv.textContent = 'Chúc mừng! Bạn đã hoàn thành Sudoku!';
-        messageDiv.style.color = 'green';
-    } else {
-        messageDiv.textContent = 'Có lỗi! Hãy kiểm tra lại.';
-        messageDiv.style.color = 'red';
+    if (flipped.length === 2) {
+        moves++;
+        movesDisplay.textContent = moves;
+        isChecking = true;
+        checkMatch();
     }
 }
 
-// Check if set is valid (no duplicates, 1-9)
-function isValidSet(arr) {
-    const filtered = arr.filter(n => n !== 0);
-    return filtered.length === new Set(filtered).size && filtered.every(n => n >= 1 && n <= 9);
+// Check match
+function checkMatch() {
+    const [card1, card2] = flipped;
+
+    if (card1.animal === card2.animal) {
+        card1.matched = true;
+        card2.matched = true;
+        matched++;
+        matchedDisplay.textContent = matched;
+        flipped = [];
+        isChecking = false;
+
+        if (matched === 8) {
+            messageDiv.textContent = `🎉 Chúc mừng! Bạn thắng trong ${moves} lần lật!`;
+            messageDiv.style.color = '#90EE90';
+        }
+        renderMemoryGrid();
+    } else {
+        setTimeout(() => {
+            card1.flipped = false;
+            card2.flipped = false;
+            flipped = [];
+            isChecking = false;
+            renderMemoryGrid();
+        }, 1000);
+    }
 }

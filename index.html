@@ -96,11 +96,13 @@
     <div id="gameModal" class="modal">
         <div class="modal-content">
             <span class="close" id="closeModal">&times;</span>
-            <h2>Game Giải Đố Số - Sudoku Mini</h2>
-            <div id="sudokuGrid"></div>
+            <h2>Game Lật Thẻ - Tìm Cặp Con Vật</h2>
+            <div id="gameStats">
+                <p>Lần lật: <span id="moves">0</span> | Cặp tìm được: <span id="matched">0</span>/8</p>
+            </div>
+            <div id="memoryGrid"></div>
             <div id="gameControls">
                 <button id="newGameBtn">Game Mới</button>
-                <button id="checkBtn">Kiểm Tra</button>
                 <div id="message"></div>
             </div>
         </div>
