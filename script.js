@@ -27,91 +27,57 @@ document.addEventListener('mouseleave', () => {
     }
 });
 
-// Enhanced Fireworks Function
+// Optimized Fireworks Function
 function createFireworks(x, y) {
-    const particleCount = 150;
+    const particleCount = 60;
     const colors = [
         '#FF0000', '#FF7F00', '#FFFF00', '#00FF00', '#0000FF', '#4B0082', '#9400D3',
-        '#FF1493', '#00CED1', '#FFD700', '#00FF7F', '#FF69B4', '#1E90FF', '#32CD32',
-        '#FF4500', '#ADFF2F', '#00FA9A', '#FF00FF', '#0FF', '#87CEEB'
+        '#FF1493', '#00CED1', '#FFD700', '#00FF7F', '#FF69B4', '#1E90FF', '#32CD32'
     ];
+
+    const angleStep = (Math.PI * 2) / particleCount;
 
     for (let i = 0; i < particleCount; i++) {
         const particle = document.createElement('div');
         particle.className = 'firework-particle';
-        
         const color = colors[Math.floor(Math.random() * colors.length)];
-        const size = Math.random() * 6 + 3;
-        
-        particle.style.cssText = `
-            position: absolute;
-            width: ${size}px;
-            height: ${size}px;
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 1000;
-            background: ${color};
-            box-shadow: 0 0 ${size + 5}px ${color}, 0 0 ${size + 10}px ${color};
-            filter: brightness(1.2);
-        `;
+        const size = Math.random() * 5 + 4;
+        const angle = i * angleStep + (Math.random() * 0.2 - 0.1);
+        const radius = Math.random() * 80 + 60;
+
+        const targetX = x + Math.cos(angle) * radius;
+        const targetY = y + Math.sin(angle) * radius;
+
+        particle.style.width = `${size}px`;
+        particle.style.height = `${size}px`;
+        particle.style.background = color;
+        particle.style.boxShadow = `0 0 ${size + 5}px ${color}, 0 0 ${size + 10}px ${color}`;
+        particle.style.left = `${x}px`;
+        particle.style.top = `${y}px`;
+        particle.style.transform = 'translate(0, 0) scale(0.2)';
+        particle.style.animation = `particle-burst 0.9s ease-out forwards`;
 
         fireworksContainer.appendChild(particle);
 
-        // Random velocity with more energy
-        const angle = (Math.random() * Math.PI * 2);
-        const speed = Math.random() * 8 + 4;
-        const velocity = {
-            x: Math.cos(angle) * speed,
-            y: Math.sin(angle) * speed - 3
-        };
+        requestAnimationFrame(() => {
+            particle.style.transform = `translate(${targetX - x}px, ${targetY - y}px) scale(1)`;
+        });
 
-        let life = 1;
-        const decay = Math.random() * 0.012 + 0.008;
-        let posX = x;
-        let posY = y;
-        let velocityY = velocity.y;
-
-        const animate = () => {
-            life -= decay;
-            posX += velocity.x;
-            posY += velocityY;
-            velocityY += 0.15; // gravity
-            
-            // Add rotation effect
-            const rotation = Math.random() * 360;
-
-            particle.style.left = posX + 'px';
-            particle.style.top = posY + 'px';
-            particle.style.opacity = life;
-            particle.style.transform = `rotate(${rotation}deg)`;
-
-            if (life > 0) {
-                requestAnimationFrame(animate);
-            } else {
-                particle.remove();
-            }
-        };
-
-        animate();
+        particle.addEventListener('animationend', () => particle.remove());
     }
 }
 
 // Gift Button Click - Enhanced Fireworks Burst
 if (giftBtn) {
     giftBtn.addEventListener('click', function(e) {
-        // Center burst - multiple calls for more particles
-        createFireworks(window.innerWidth / 2, window.innerHeight / 2);
+        // Center burst
         createFireworks(window.innerWidth / 2, window.innerHeight / 2);
 
-        // Multiple bursts around in circle pattern
+        // A few bursts around to fill the sky without heavy load
         const positions = [
-            { x: window.innerWidth / 3, y: window.innerHeight / 3, time: 50 },
-            { x: (window.innerWidth * 2) / 3, y: window.innerHeight / 3, time: 100 },
-            { x: window.innerWidth / 4, y: (window.innerHeight * 2) / 3, time: 150 },
-            { x: (window.innerWidth * 3) / 4, y: (window.innerHeight * 2) / 3, time: 200 },
-            { x: window.innerWidth / 2, y: window.innerHeight * 0.7, time: 250 },
-            { x: window.innerWidth * 0.8, y: window.innerHeight * 0.3, time: 300 },
-            { x: window.innerWidth * 0.2, y: window.innerHeight * 0.6, time: 350 }
+            { x: window.innerWidth / 3, y: window.innerHeight / 3, time: 80 },
+            { x: (window.innerWidth * 2) / 3, y: window.innerHeight / 3, time: 160 },
+            { x: window.innerWidth / 2, y: window.innerHeight * 0.7, time: 240 }
         ];
 
         positions.forEach(pos => {
