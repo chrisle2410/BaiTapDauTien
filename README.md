@@ -6,6 +6,10 @@ Repository nay hien dang build AI agent chinh trong thu muc `work_ai_agent`.
 
 - `work_ai_agent/`: backend FastAPI cho Telegram bot, Google Sheet, SQLite, email, webhook
 
+## Tai lieu huong dan
+
+- `work_ai_agent/RUN_BOT.md`: huong dan tung buoc de cai va chay Telegram AI bot local
+
 ## Ghi chu
 
 - `shield_ai/` va ban sao trong `shield AI/` da duoc loai bo de tranh nham lan

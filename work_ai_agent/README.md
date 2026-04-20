@@ -14,6 +14,9 @@ Luồng chính:
 - `app/core/`: Cấu hình tích hợp
 - `tests/`: Smoke test cơ bản
 
+## Tai lieu chay bot
+- Xem huong dan tung buoc tai `RUN_BOT.md`
+
 ## Khởi động nhanh
 ```bash
 pip install -r requirements.txt
