@@ -1,0 +1,2898 @@
+{
+  "service_catalog": [
+    {
+      "service_name": "Nhận Hàng - Nhận Hàng Trong Giờ Làm Việc",
+      "category": "Inbound / Basic / KHO",
+      "keywords": [
+        "nhan hang - nhan hang trong gio lam viec",
+        "inbound / basic / kho",
+        "wh-ib-001-001-001",
+        "nhan hang nhan issue",
+        "nhan hang nhan error",
+        "cannot access nhan hang nhan",
+        "cannot connect nhan hang nhan",
+        "support nhan hang nhan"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "Xe đến trong khung giờ quy định",
+      "sla": "Nhập kho trong 24h kể từ thời điểm xe đến",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Nhận Hàng - Nhận Hàng Ngoài Giờ Trong Tuần",
+      "category": "Inbound / Added / KHO",
+      "keywords": [
+        "nhan hang - nhan hang ngoai gio trong tuan",
+        "inbound / added / kho",
+        "wh-ib-001-002-001",
+        "nhan hang nhan issue",
+        "nhan hang nhan error",
+        "cannot access nhan hang nhan",
+        "cannot connect nhan hang nhan",
+        "support nhan hang nhan"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "Xe đến ngoài giờ hành chính vào các ngày từ t2-t7, KH yêu cầu GIP nhận hàng ngay trong ngày tránh việc xe quay đầu mất thêm chi phí vận chuyển của KH",
+      "sla": "Nhận hàng trong ngày khi có yêu cầu của KH, nhập kho 24h kể từ thời điểm nhận hàng.",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Nhận Hàng - Nhận Hàng Ngoài Giờ Chủ Nhật",
+      "category": "Inbound / Adhoc / KHO",
+      "keywords": [
+        "nhan hang - nhan hang ngoai gio chu nhat",
+        "inbound / adhoc / kho",
+        "wh-ib-001-003-001",
+        "nhan hang nhan issue",
+        "nhan hang nhan error",
+        "cannot access nhan hang nhan",
+        "cannot connect nhan hang nhan",
+        "support nhan hang nhan"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "Xe đến ngoài giờ hành chính vào ngày chủ nhật, KH yêu cầu GIP nhận hàng ngay trong ngày tránh việc xe quay đầu mất thêm chi phí vận chuyển của KH",
+      "sla": "Nhận hàng trong ngày khi có yêu cầu của KH, nhập kho 24h kể từ thời điểm nhận hàng.",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Nhận Hàng - Nhận Hàng Ngoài Giờ Ngày Lễ",
+      "category": "Inbound / Adhoc / KHO",
+      "keywords": [
+        "nhan hang - nhan hang ngoai gio ngay le",
+        "inbound / adhoc / kho",
+        "wh-ib-001-004-001",
+        "nhan hang nhan issue",
+        "nhan hang nhan error",
+        "cannot access nhan hang nhan",
+        "cannot connect nhan hang nhan",
+        "support nhan hang nhan"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "Xe đến ngoài giờ hành chính vào ngày lễ, KH yêu cầu GIP nhận hàng ngay trong ngày tránh việc xe quay đầu mất thêm chi phí vận chuyển của KH",
+      "sla": "Nhận hàng trong ngày khi có yêu cầu của KH, nhập kho 24h kể từ thời điểm nhận hàng.",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Nhập KHO - Nhâp KHO Không Có ASN Ngoài 24h",
+      "category": "Inbound / Basic / KHO",
+      "keywords": [
+        "nhap kho - nhap kho khong co asn ngoai 24h",
+        "inbound / basic / kho",
+        "wh-ib-002-001-001",
+        "nhap kho nhap issue",
+        "nhap kho nhap error",
+        "cannot access nhap kho nhap",
+        "cannot connect nhap kho nhap",
+        "support nhap kho nhap"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "Xe hàng đến không có ASN, nhận hàng và thông báo cho KH sẽ nhập kho trễ sau 24h do đơn hàng không có ASN",
+      "sla": "Nhận hàng trong ngày và nhập hàng sau 24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Nhập KHO - Nhâp KHO Không Có ASN Trong 24h",
+      "category": "Inbound / Adhoc / KHO",
+      "keywords": [
+        "nhap kho - nhap kho khong co asn trong 24h",
+        "inbound / adhoc / kho",
+        "wh-ib-002-002-001",
+        "nhap kho nhap issue",
+        "nhap kho nhap error",
+        "cannot access nhap kho nhap",
+        "cannot connect nhap kho nhap",
+        "support nhap kho nhap"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "Xe hàng đến không có ASN, tuy nhiên KH vẫn yêu cầu nhận hàng trong 24h",
+      "sla": "Nhận hàng và nhập kho trong 24h kể từ thời điểm nhận hàng (Cần check lại năng lực kho thực tế ngày hôm đó)",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Nhập KHO - Nhập KHO Các Kiện Hàng Có Nhiều SKUS Trong Kiện",
+      "category": "Inbound / Adhoc / KHO",
+      "keywords": [
+        "nhap kho - nhap kho cac kien hang co nhieu skus trong kien",
+        "inbound / adhoc / kho",
+        "wh-ib-002-003-001",
+        "nhap kho nhap issue",
+        "nhap kho nhap error",
+        "cannot access nhap kho nhap",
+        "cannot connect nhap kho nhap",
+        "support nhap kho nhap"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "Hàng có nhiều SKUs trong một kiện, KH không phân loại trước khi gửi",
+      "sla": "Phân tách, kiểm đếm hàng hóa và nhập kho trong 24h (sẽ báo lại theo năng lực kho thực tế tại thời điểm đó nếu có thay đổi)",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Nhập KHO - Nhập KHO Và Kiểm Đếm CHI Tiết",
+      "category": "Inbound / Basic / KHO",
+      "keywords": [
+        "nhap kho - nhap kho va kiem dem chi tiet",
+        "inbound / basic / kho",
+        "wh-ib-002-004-001",
+        "nhap kho nhap issue",
+        "nhap kho nhap error",
+        "cannot access nhap kho nhap",
+        "cannot connect nhap kho nhap",
+        "support nhap kho nhap"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "Kiểm đếm chi tiết số lượng từng SKUs trong đơn nhập",
+      "sla": "Đơn nhập được kiểm đếm chi tiết số lượng và báo lại KH khi phát sinh chênh lệch",
+      "priority_rules": "Medium - Default Medium priority. Raise to High if the request impacts live operations, customer commitments, or urgent delivery milestones."
+    },
+    {
+      "service_name": "Nhập KHO - Dán TEM QR CODE CHO Từng Sản Phẩm",
+      "category": "Inbound / Basic / KHO",
+      "keywords": [
+        "nhap kho - dan tem qr code cho tung san pham",
+        "inbound / basic / kho",
+        "wh-ib-002-005-001",
+        "nhap kho dan issue",
+        "nhap kho dan error",
+        "cannot access nhap kho dan",
+        "cannot connect nhap kho dan",
+        "support nhap kho dan"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "Dán tem cho từng sản phẩm để quản lý (trừ những sản phẩm đặc thù không thể dán tem)",
+      "sla": "100% sản phẩm được dán tem (nếu đủ điều kiện)",
+      "priority_rules": "Medium - Default Medium priority. Raise to High if the request impacts live operations, customer commitments, or urgent delivery milestones."
+    },
+    {
+      "service_name": "Nhập KHO - QC Sản Phẩm KHI Có Yêu Cầu Từ KH",
+      "category": "Inbound / Adhoc / KHO",
+      "keywords": [
+        "nhap kho - qc san pham khi co yeu cau tu kh",
+        "inbound / adhoc / kho",
+        "wh-ib-002-006-001",
+        "nhap kho qc issue",
+        "nhap kho qc error",
+        "cannot access nhap kho qc",
+        "cannot connect nhap kho qc",
+        "support nhap kho qc"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "Kiểm tra chất lượng sản phẩm khi có yêu cầu từ KH",
+      "sla": "Các sản phẩm yêu cầu được phản hồi đúng hiện trạng chất lượng",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Nhập KHO - QUAY Video Kiểm Đếm CHI Tiết",
+      "category": "Inbound / Adhoc / KHO",
+      "keywords": [
+        "nhap kho - quay video kiem dem chi tiet",
+        "inbound / adhoc / kho",
+        "wh-ib-002-007-001",
+        "nhap kho quay issue",
+        "nhap kho quay error",
+        "cannot access nhap kho quay",
+        "cannot connect nhap kho quay",
+        "support nhap kho quay"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "Quay video theo yêu cầu của KH khi phát sinh chênh lệch",
+      "sla": "24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Nhập KHO - Kiểm Hàng Hoàn KHO Khác Và Nhập KHO Bán Mới",
+      "category": "Inbound / Adhoc / KHO",
+      "keywords": [
+        "nhap kho - kiem hang hoan kho khac va nhap kho ban moi",
+        "inbound / adhoc / kho",
+        "wh-ib-002-008-001",
+        "nhap kho kiem issue",
+        "nhap kho kiem error",
+        "cannot access nhap kho kiem",
+        "cannot connect nhap kho kiem",
+        "support nhap kho kiem"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "KH yêu cầu kiểm tra, nhập hàng hoàn từ kho khác ngoài GIP để bán mới",
+      "sla": "Chỉ kiểm đếm số lượng, ngoại quan và nhập tồn kho",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Nhận Hàng - Gọi XE Hộ",
+      "category": "Inbound / Adhoc / KHO",
+      "keywords": [
+        "nhan hang - goi xe ho",
+        "inbound / adhoc / kho",
+        "wh-ib-003-001-001",
+        "nhan hang goi issue",
+        "nhan hang goi error",
+        "cannot access nhan hang goi",
+        "cannot connect nhan hang goi",
+        "support nhan hang goi"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "Book xe tải vận chuyển hàng theo yêu cầu của KH",
+      "sla": "24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Lưu KHO - Lưu KHO Trong Thời GIAN Miễn Phí",
+      "category": "Storage / Basic / KHO",
+      "keywords": [
+        "luu kho - luu kho trong thoi gian mien phi",
+        "storage / basic / kho",
+        "wh-st-001-001-001",
+        "luu kho luu issue",
+        "luu kho luu error",
+        "cannot access luu kho luu",
+        "cannot connect luu kho luu",
+        "support luu kho luu"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "Hàng hóa khi nhập vào kho GIP sẽ hỗ trợ lưu kho miễn phí cho KH 3 tháng",
+      "sla": "GIP đảm bảo về số lượng và chất lượng hàng lưu kho",
+      "priority_rules": "Medium - Default Medium priority. Raise to High if the request impacts live operations, customer commitments, or urgent delivery milestones."
+    },
+    {
+      "service_name": "Lưu KHO - Lưu KHO Quá Hạn",
+      "category": "Storage / Added / KHO",
+      "keywords": [
+        "luu kho - luu kho qua han",
+        "storage / added / kho",
+        "wh-st-001-002-001",
+        "luu kho luu issue",
+        "luu kho luu error",
+        "cannot access luu kho luu",
+        "cannot connect luu kho luu",
+        "support luu kho luu"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "Hàng hóa vượt quá thời gian lưu kho miễn phí (ngoài 2 tháng)",
+      "sla": "GIP đảm bảo về số lượng và chất lượng hàng lưu kho",
+      "priority_rules": "Medium - Default Medium priority. Raise to High when the request becomes time-sensitive, affects live orders, or requires after-hours coordination."
+    },
+    {
+      "service_name": "Lưu KHO - Lưu KHO Hàng Cồng Kềnh",
+      "category": "Storage / Adhoc / KHO",
+      "keywords": [
+        "luu kho - luu kho hang cong kenh",
+        "storage / adhoc / kho",
+        "wh-st-001-003-001",
+        "luu kho luu issue",
+        "luu kho luu error",
+        "cannot access luu kho luu",
+        "cannot connect luu kho luu",
+        "support luu kho luu"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "Lưu kho hàng cồng kềnh, quá khổ: cân nặng vượt qua 30kg hoặc kích thước lớn nhất (dài, rộng cao) vượt quá 1m",
+      "sla": "GIP đảm bảo về số lượng và chất lượng hàng lưu kho",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Lưu KHO - Dọn KHO THEO Yêu Cầu Của KH",
+      "category": "Storage / Adhoc / KHO",
+      "keywords": [
+        "luu kho - don kho theo yeu cau cua kh",
+        "storage / adhoc / kho",
+        "wh-st-001-004-001",
+        "luu kho don issue",
+        "luu kho don error",
+        "cannot access luu kho don",
+        "cannot connect luu kho don",
+        "support luu kho don"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "Áp dụng với các KH thuê 1 phần diện tích kho và có nhu cầu dọn dẹp vệ sinh khu vực KH thuê",
+      "sla": "24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Kiểm Kê - Kiểm Kê THEO Yêu Cầu Của KH",
+      "category": "Storage / Adhoc / KHO",
+      "keywords": [
+        "kiem ke - kiem ke theo yeu cau cua kh",
+        "storage / adhoc / kho",
+        "wh-st-002-001-001",
+        "kiem ke kiem issue",
+        "kiem ke kiem error",
+        "cannot access kiem ke kiem",
+        "cannot connect kiem ke kiem",
+        "support kiem ke kiem"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "KH yêu cầu kiểm kê ngoài kỳ",
+      "sla": "GIP kiểm kê và phản hồi cho KH tồn kho thực tế tại kho",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Đóng Gói - Đóng Gói Tiêu Chuẩn",
+      "category": "Outbound / Basic / KHO",
+      "keywords": [
+        "dong goi - dong goi tieu chuan",
+        "outbound / basic / kho",
+        "wh-ob-001-001-001",
+        "dong goi dong issue",
+        "dong goi dong error",
+        "cannot access dong goi dong",
+        "cannot connect dong goi dong",
+        "support dong goi dong"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "Đóng gói đúng theo tiêu chuẩn GIP cam kết với KH",
+      "sla": "100% đơn hàng được đóng gói theo tiêu chuẩn GIP đã cam kết",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Đóng Gói - Đóng Gói Nâng CAO",
+      "category": "Outbound / Adhoc / KHO",
+      "keywords": [
+        "dong goi - dong goi nang cao",
+        "outbound / adhoc / kho",
+        "wh-ob-001-002-001",
+        "dong goi dong issue",
+        "dong goi dong error",
+        "cannot access dong goi dong",
+        "cannot connect dong goi dong",
+        "support dong goi dong"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "Đóng gói theo yêu cầu đặc thù của KH: Thêm tag name, thêm chống sốc, thêm vỏ hộp,...",
+      "sla": "GIP cam kết đóng gói đúng theo yêu cầu của KH",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Đóng Gói - Đóng Gói Nâng CAO - Đóng Gói Lại",
+      "category": "Outbound / Adhoc / KHO",
+      "keywords": [
+        "dong goi - dong goi nang cao - dong goi lai",
+        "outbound / adhoc / kho",
+        "wh-ob-001-002-002",
+        "dong goi dong issue",
+        "dong goi dong error",
+        "cannot access dong goi dong",
+        "cannot connect dong goi dong",
+        "support dong goi dong"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "Sau khi đơn hàng đã được đóng gói xong nhưng KH có yêu cầu re-pack: gia cố thêm, gom, tách đơn,...",
+      "sla": "GIP cam kết đóng gói theo yêu cầu của KH (nếu đơn hàng chưa bàn giao cho đvvc)",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Xuất KHO - Xuất Hàng Tiêu Chuẩn",
+      "category": "Outbound / Basic / KHO",
+      "keywords": [
+        "xuat kho - xuat hang tieu chuan",
+        "outbound / basic / kho",
+        "wh-ob-002-001-001",
+        "xuat kho xuat issue",
+        "xuat kho xuat error",
+        "cannot access xuat kho xuat",
+        "cannot connect xuat kho xuat",
+        "support xuat kho xuat"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "Các đơn hàng được bàn giao cho ĐVVC",
+      "sla": "GIP cam kết các đơn hàng được chuẩn bị sẵn sàng để bàn giao cho đvvc đúng thời gian COT cam kết",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Xuất KHO - Xuất Hàng Nâng CAO",
+      "category": "Outbound / Added / KHO",
+      "keywords": [
+        "xuat kho - xuat hang nang cao",
+        "outbound / added / kho",
+        "wh-ob-002-002-001",
+        "xuat kho xuat issue",
+        "xuat kho xuat error",
+        "cannot access xuat kho xuat",
+        "cannot connect xuat kho xuat",
+        "support xuat kho xuat"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "Các đơn hàng được bàn giao ngoài tiêu chuẩn cho đvvc theo yêu cầu của KH: book vận chuyển ngoài (lalamove), bàn giao gấp, bàn giao ngoài giờ COT,...",
+      "sla": "Làm theo yêu cầu của KH và báo lại tình trạng đơn hàng cho KH được biết",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Nhận Hàng Hoàn - Nhận Hàng Hoàn Tiêu Chuẩn",
+      "category": "Return / Basic / KHO",
+      "keywords": [
+        "nhan hang hoan - nhan hang hoan tieu chuan",
+        "return / basic / kho",
+        "wh-rt-001-001-001",
+        "nhan hang hoan issue",
+        "nhan hang hoan error",
+        "cannot access nhan hang hoan",
+        "cannot connect nhan hang hoan",
+        "support nhan hang hoan"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "Các đơn hàng hoàn được nhận và nhập kho đúng theo SLA đã cam kết với KH",
+      "sla": "24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Nhận Hàng Hoàn - Nhận Hàng Hoàn Nâng CAO - Nhận Gấp",
+      "category": "Return / Added / KHO",
+      "keywords": [
+        "nhan hang hoan - nhan hang hoan nang cao - nhan gap",
+        "return / added / kho",
+        "wh-rt-001-002-001",
+        "nhan hang hoan issue",
+        "nhan hang hoan error",
+        "cannot access nhan hang hoan",
+        "cannot connect nhan hang hoan",
+        "support nhan hang hoan"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "Khách cần nhập kho gấp để lấy hàng bán",
+      "sla": "GIP kiểm tra và nhận gấp hàng hoàn cho KH trong vòng 1h",
+      "priority_rules": "Medium - Default Medium priority. Raise to High when the request becomes time-sensitive, affects live orders, or requires after-hours coordination."
+    },
+    {
+      "service_name": "Nhận Hàng Hoàn - Nhận Hàng Hoàn Nâng CAO - Gửi Video Hình Ảnh Lúc Bóc Hàng Hoàn",
+      "category": "Return / Added / KHO",
+      "keywords": [
+        "nhan hang hoan - nhan hang hoan nang cao - gui video hinh anh luc boc hang hoan",
+        "return / added / kho",
+        "wh-rt-001-002-002",
+        "nhan hang hoan issue",
+        "nhan hang hoan error",
+        "cannot access nhan hang hoan",
+        "cannot connect nhan hang hoan",
+        "support nhan hang hoan"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "Khách cần xin video/hình ảnh lúc unpack hàng hoàn để claim với đvvc",
+      "sla": "GIP cắt video, hình ảnh theo yêu cầu của khách",
+      "priority_rules": "Medium - Default Medium priority. Raise to High when the request becomes time-sensitive, affects live orders, or requires after-hours coordination."
+    },
+    {
+      "service_name": "Khiếu Nại - Hỗ Trợ KH Xử Lý Khiếu Nại Đvvc",
+      "category": "Return / Adhoc / KHO",
+      "keywords": [
+        "khieu nai - ho tro kh xu ly khieu nai dvvc",
+        "return / adhoc / kho",
+        "wh-rt-002-001-001",
+        "khieu nai ho issue",
+        "khieu nai ho error",
+        "cannot access khieu nai ho",
+        "cannot connect khieu nai ho",
+        "support khieu nai ho"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "Khách cần GIP hỗ trợ claim đvvc về hư tổn, móp méo, tráo hàng,...",
+      "sla": "GIP thay mặt KH làm việc với đvvc để đảm bảo quyền lợi của KH",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Thuê Pháp Nhân Bản Địa (áp Dụng CHO Thị Trường Philippines)",
+      "category": "Thuê pháp nhân bản địa (áp dụng cho thị trường Philippines) / Adhoc / KD",
+      "keywords": [
+        "thue phap nhan ban dia ap dung cho thi truong philippines",
+        "thue phap nhan ban dia ap dung cho thi truong philippines / adhoc / kd",
+        "kd-pn-001-000-000",
+        "thue phap nhan issue",
+        "thue phap nhan error",
+        "cannot access thue phap nhan",
+        "cannot connect thue phap nhan",
+        "support thue phap nhan"
+      ],
+      "pic": "Finance Operations Team",
+      "sop": "Cho thuê pháp nhân mở tài khoản gồm:\n1. Nhân sự\n2. SĐT\n3. Email\n4. Bank cá nhân",
+      "sla": "Nhân sự đảm bảo cung cấp OTP khi cần thiết, \nXử lý dòng tiền chuẩn chỉnh cho khách",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "MUA Bán Tài Khoản Sàn Tmđt",
+      "category": "Bán tài khoản TMĐT / Adhoc / KD",
+      "keywords": [
+        "mua ban tai khoan san tmdt",
+        "ban tai khoan tmdt / adhoc / kd",
+        "kd-tk-002-001-000",
+        "mua ban tai issue",
+        "mua ban tai error",
+        "cannot access mua ban tai",
+        "cannot connect mua ban tai",
+        "support mua ban tai"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "Cung cấp tài khoản Shopee/TikTok Shop tại 4 thị trường.\nTài khoản được bàn giao sau tối đa 3 ngày kể từ khi khách hàng hoàn tất thanh toán.",
+      "sla": "Cung cấp tài khoản đúng thời hạn và hỗ trợ trong quá trình sử dụng.",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "MUA Bán Tài Khoản Sàn Tmđt - CUNG Cấp SIM Bản Địa",
+      "category": "Bán tài khoản TMĐT / KD",
+      "keywords": [
+        "mua ban tai khoan san tmdt - cung cap sim ban dia",
+        "ban tai khoan tmdt / kd",
+        "kd-tk-002-001-001",
+        "mua ban tai issue",
+        "mua ban tai error",
+        "cannot access mua ban tai",
+        "cannot connect mua ban tai",
+        "support mua ban tai"
+      ],
+      "pic": "Finance Operations Team",
+      "sop": "Bán tài khoản Shopee/Tiktok Shop tại 4 thị trường, cung cấp tài khoản sau 3 ngày khách thanh toán\nHỗ trợ mua SIM bản địa theo nhu cầu tại mục mua SIM.",
+      "sla": "Cung cấp tài khoản đúng thời hạn và hỗ trợ thủ tục mua SIM, lấy OTP khi cần.",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "MUA Bán Tài Khoản Sàn Tmđt - CUNG Cấp SIM Bản Địa - CHO Thuê Tài Khoản Ngân Hàng",
+      "category": "Bán tài khoản TMĐT / KD",
+      "keywords": [
+        "mua ban tai khoan san tmdt - cung cap sim ban dia - cho thue tai khoan ngan hang",
+        "ban tai khoan tmdt / kd",
+        "kd-tk-002-001-002",
+        "mua ban tai issue",
+        "mua ban tai error",
+        "cannot access mua ban tai",
+        "cannot connect mua ban tai",
+        "support mua ban tai"
+      ],
+      "pic": "Finance Operations Team",
+      "sop": "Bán tài khoản Shopee/Tiktok Shop tại 4 thị trường, cung cấp tài khoản sau 3 ngày khách thanh toán\nHỗ trợ mua SIM bản địa theo nhu cầu tại mục mua SIM.\nCho thuê tài khoản NH hỗ trợ xử lý dòng tiền",
+      "sla": "Cung cấp tài khoản đúng thời hạn và hỗ trợ thủ tục mua SIM, lấy OTP khi cần.\nĐối soát dòng tiền",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Mở BANK Thị Trường PHIL",
+      "category": "Mở bank / KD",
+      "keywords": [
+        "mo bank thi truong phil",
+        "mo bank / kd",
+        "kd-tk-002-002-000",
+        "mo bank thi issue",
+        "mo bank thi error",
+        "cannot access mo bank thi",
+        "cannot connect mo bank thi",
+        "support mo bank thi"
+      ],
+      "pic": "Finance Operations Team",
+      "sop": "Hỗ trợ mở tài khoản quảng cáo phục vụ chạy quảng cáo trên các nền tảng.",
+      "sla": "Hoàn thành mở tài khoản trong 15 ngày làm việc.\nTài khoản được kích hoạt và sẵn sàng chạy quảng cáo. \nHỗ trợ hướng dẫn sử dụng cơ bản sau mở.",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "MUA SIM Clone",
+      "category": "Mua sim / KD",
+      "keywords": [
+        "mua sim clone",
+        "mua sim / kd",
+        "kd-sim-003-001-000",
+        "mua sim clone issue",
+        "mua sim clone error",
+        "cannot access mua sim clone",
+        "cannot connect mua sim clone",
+        "support mua sim clone"
+      ],
+      "pic": "Business Development Team",
+      "sop": "Mua sim trắng để add theo nhu cầu khách hàng",
+      "sla": "Mua sim và gửi thông tin sim cho khách + bảo quản",
+      "priority_rules": "Medium - Default Medium priority. Raise to High if the request impacts live operations, customer commitments, or urgent delivery milestones."
+    },
+    {
+      "service_name": "MUA SIM Chính Chủ",
+      "category": "Mua sim / Added / KD",
+      "keywords": [
+        "mua sim chinh chu",
+        "mua sim / added / kd",
+        "kd-sim-003-002-000",
+        "mua sim chinh issue",
+        "mua sim chinh error",
+        "cannot access mua sim chinh",
+        "cannot connect mua sim chinh",
+        "support mua sim chinh"
+      ],
+      "pic": "Finance Operations Team",
+      "sop": "Nhân sự bản địa mua sim và đăng ký thông tin cá nhân chính chủ",
+      "sla": "Đảm bảo sim luôn hoạt động + gửi OTP khi KH cần",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Seeding Comment",
+      "category": "Seeding / Adhoc / KD",
+      "keywords": [
+        "seeding comment",
+        "seeding / adhoc / kd",
+        "kd-sd-004-001-000",
+        "seeding comment issue",
+        "seeding comment error",
+        "cannot access seeding comment",
+        "cannot connect seeding comment",
+        "support seeding comment"
+      ],
+      "pic": "Business Development Team",
+      "sop": "Cung cấp dịch vụ seeding bình luận theo yêu cầu.",
+      "sla": "Đảm bảo seeding theo nhu cầu của khách hàng",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Seeding Comment - Seeding MUA Hàng",
+      "category": "Seeding / KD",
+      "keywords": [
+        "seeding comment - seeding mua hang",
+        "seeding / kd",
+        "kd-sd-004-001-001",
+        "seeding comment seeding issue",
+        "seeding comment seeding error",
+        "cannot access seeding comment seeding",
+        "cannot connect seeding comment seeding",
+        "support seeding comment seeding"
+      ],
+      "pic": "Business Development Team",
+      "sop": "Cung cấp dịch vụ seeding mua hàng nhằm tăng độ uy tín và tương tác cho gian hàng.",
+      "sla": "Đặt hàng & feedback đúng yêu cầu",
+      "priority_rules": "Medium - Default Medium priority. Raise to High if the request impacts live operations, customer commitments, or urgent delivery milestones."
+    },
+    {
+      "service_name": "Seeding Comment - Seeding MUA Hàng - Seeding RATE",
+      "category": "Seeding / KD",
+      "keywords": [
+        "seeding comment - seeding mua hang - seeding rate",
+        "seeding / kd",
+        "kd-sd-004-001-002",
+        "seeding comment seeding issue",
+        "seeding comment seeding error",
+        "cannot access seeding comment seeding",
+        "cannot connect seeding comment seeding",
+        "support seeding comment seeding"
+      ],
+      "pic": "Business Development Team",
+      "sop": "Cung cấp dịch vụ seeding mua hàng nhằm tăng độ uy tín và tương tác cho gian hàng.",
+      "sla": "Đặt hàng & feedback đúng yêu cầu",
+      "priority_rules": "Medium - Default Medium priority. Raise to High if the request impacts live operations, customer commitments, or urgent delivery milestones."
+    },
+    {
+      "service_name": "Dịch Vụ Agency - Dịch Vụ Hỗ Trợ Chạy ADS Facebook - BANK",
+      "category": "AGENCY / Added / KT",
+      "keywords": [
+        "dich vu agency - dich vu ho tro chay ads facebook - bank",
+        "agency / added / kt",
+        "kt-ads-001-001",
+        "dich vu agency issue",
+        "dich vu agency error",
+        "cannot access dich vu agency",
+        "cannot connect dich vu agency",
+        "support dich vu agency"
+      ],
+      "pic": "Agency Operations Team",
+      "sop": "Nhận tiền và Top up tiền của khách vào tài khoản chạy Ads cho khách",
+      "sla": "- Nhận tiền của khách và top up tiền của khách vào tài khoản để chạy Ads\n- Làm bảng theo dõi ngân sách cho khách",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Dịch Vụ Agency - Dịch Vụ Hỗ Trợ Tài Khoản Chạy ADS - Pingpong",
+      "category": "AGENCY / Added / KT",
+      "keywords": [
+        "dich vu agency - dich vu ho tro tai khoan chay ads - pingpong",
+        "agency / added / kt",
+        "kt-ads-001-002",
+        "dich vu agency issue",
+        "dich vu agency error",
+        "cannot access dich vu agency",
+        "cannot connect dich vu agency",
+        "support dich vu agency"
+      ],
+      "pic": "Agency Operations Team",
+      "sop": "Top up tiền của khách vào tài khoản chạy Ads cho khách",
+      "sla": "- Top up tiền của khách vào các thẻ Pingpong để chạy Ads\n- Làm bảng theo dõi ngân sách cho khách",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Dịch Vụ SET UP - Dịch Vụ SET UP",
+      "category": "SET UP / Basic / KT",
+      "keywords": [
+        "dich vu set up - dich vu set up",
+        "set up / basic / kt",
+        "kt-set-001-001",
+        "dich vu set issue",
+        "dich vu set error",
+        "cannot access dich vu set",
+        "cannot connect dich vu set",
+        "support dich vu set"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "- Set up văn phòng riêng, kho riêng và GIP hỗ trợ vận hành",
+      "sla": "24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Dịch Vụ SET UP - Dịch Vụ SET UP MINI",
+      "category": "SET UP / Basic / KT",
+      "keywords": [
+        "dich vu set up - dich vu set up mini",
+        "set up / basic / kt",
+        "kt-set-001-002",
+        "dich vu set issue",
+        "dich vu set error",
+        "cannot access dich vu set",
+        "cannot connect dich vu set",
+        "support dich vu set"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "- Không tách riêng kho, văn phòng sử dụng chung với GIP Main, GIP vẫn hỗ trợ vận hành",
+      "sla": "24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Thuê KHO Văn Phòng - Thuê KHO",
+      "category": "THUÊ ĐỊA ĐIỂM / Basic / KT",
+      "keywords": [
+        "thue kho van phong - thue kho",
+        "thue dia diem / basic / kt",
+        "kt-ren-001-001",
+        "thue kho van issue",
+        "thue kho van error",
+        "cannot access thue kho van",
+        "cannot connect thue kho van",
+        "support thue kho van"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "- Thu tiền thuê kho của khách",
+      "sla": "24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Thuê KHO Văn Phòng - Thuê Văn Phòng",
+      "category": "THUÊ ĐỊA ĐIỂM / Basic / KT",
+      "keywords": [
+        "thue kho van phong - thue van phong",
+        "thue dia diem / basic / kt",
+        "kt-ren-001-002",
+        "thue kho van issue",
+        "thue kho van error",
+        "cannot access thue kho van",
+        "cannot connect thue kho van",
+        "support thue kho van"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "- Thu tiền thuê văn phòng của khách",
+      "sla": "24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Dịch Vụ Thuê Tài Khoản Nhận COD - Dịch Vụ Thuê Tài Khoản Nhận COD Đvvc",
+      "category": "THUÊ TÀI KHOẢN / Basic / KT",
+      "keywords": [
+        "dich vu thue tai khoan nhan cod - dich vu thue tai khoan nhan cod dvvc",
+        "thue tai khoan / basic / kt",
+        "kt-ttk-001-001",
+        "dich vu thue issue",
+        "dich vu thue error",
+        "cannot access dich vu thue",
+        "cannot connect dich vu thue",
+        "support dich vu thue"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "Cung cấp tài khoản nhận COD từ các đơn vị vận chuyển",
+      "sla": "- Phối hợp các doanh nghiệp/ cá nhân tại các nước sở tại cung cấp tài khoản vận chuyển để đi đơn và nhận COD cho khách hàng\n- Thực hiện đối soát COD giao hàng thành công và tiền ĐVVC thanh toán",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Dịch Vụ Thuê Tài Khoản Nhận COD - Dịch Vụ Thuê Tài Khoản Facebook - Trả Trước",
+      "category": "THUÊ TÀI KHOẢN / Basic / KT",
+      "keywords": [
+        "dich vu thue tai khoan nhan cod - dich vu thue tai khoan facebook - tra truoc",
+        "thue tai khoan / basic / kt",
+        "kt-ttk-001-002",
+        "dich vu thue issue",
+        "dich vu thue error",
+        "cannot access dich vu thue",
+        "cannot connect dich vu thue",
+        "support dich vu thue"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "Cung cấp tài khoản nhận tiền trả trước của người mua",
+      "sla": "- Phối hợp các doanh nghiệp/ cá nhân tại các nước sở tại cung cấp tài khoản nhận thanh toán và đối soát thanh toán cho khách",
+      "priority_rules": "Medium - Default Medium priority. Raise to High if the request impacts live operations, customer commitments, or urgent delivery milestones."
+    },
+    {
+      "service_name": "Dịch Vụ Thuê Tài Khoản Nhận COD - Dịch Vụ Thuê Tài Khoản Sàn Tiktok",
+      "category": "THUÊ TÀI KHOẢN / Basic / KT",
+      "keywords": [
+        "dich vu thue tai khoan nhan cod - dich vu thue tai khoan san tiktok",
+        "thue tai khoan / basic / kt",
+        "kt-ttk-001-003",
+        "dich vu thue issue",
+        "dich vu thue error",
+        "cannot access dich vu thue",
+        "cannot connect dich vu thue",
+        "support dich vu thue"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "Cung cấp tài khoản rút tiền từ sàn TIKTOK",
+      "sla": "- Phối hợp các doanh nghiệp/ cá nhân tại các nước sở tại cung cấp tài khoản nhận thanh toán và đối soát thanh toán cho khách",
+      "priority_rules": "Medium - Default Medium priority. Raise to High if the request impacts live operations, customer commitments, or urgent delivery milestones."
+    },
+    {
+      "service_name": "Dịch Vụ Thuê Tài Khoản Nhận COD - Dịch Vụ Thuê Tài Khoản Sàn Shopee",
+      "category": "THUÊ TÀI KHOẢN / Basic / KT",
+      "keywords": [
+        "dich vu thue tai khoan nhan cod - dich vu thue tai khoan san shopee",
+        "thue tai khoan / basic / kt",
+        "kt-ttk-001-004",
+        "dich vu thue issue",
+        "dich vu thue error",
+        "cannot access dich vu thue",
+        "cannot connect dich vu thue",
+        "support dich vu thue"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "Cung cấp tài khoản rút tiền từ sàn SHOPEE",
+      "sla": "- Phối hợp các doanh nghiệp/ cá nhân tại các nước sở tại cung cấp tài khoản nhận thanh toán và đối soát thanh toán cho khách",
+      "priority_rules": "Medium - Default Medium priority. Raise to High if the request impacts live operations, customer commitments, or urgent delivery milestones."
+    },
+    {
+      "service_name": "Dịch Vụ Thuê Tài Khoản - Thuê Người Đại Diện Pháp Luật",
+      "category": "THUÊ TÀI KHOẢN / Added / KT",
+      "keywords": [
+        "dich vu thue tai khoan - thue nguoi dai dien phap luat",
+        "thue tai khoan / added / kt",
+        "kt-ttk-002-001",
+        "dich vu thue issue",
+        "dich vu thue error",
+        "cannot access dich vu thue",
+        "cannot connect dich vu thue",
+        "support dich vu thue"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "Follow standard operating procedure.",
+      "sla": "24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Dịch Vụ Thuê Tài Khoản - Thuê Người Đồng Sở Hữu",
+      "category": "THUÊ TÀI KHOẢN / Added / KT",
+      "keywords": [
+        "dich vu thue tai khoan - thue nguoi dong so huu",
+        "thue tai khoan / added / kt",
+        "kt-ttk-002-002",
+        "dich vu thue issue",
+        "dich vu thue error",
+        "cannot access dich vu thue",
+        "cannot connect dich vu thue",
+        "support dich vu thue"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "Follow standard operating procedure.",
+      "sla": "24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Dịch Vụ Thuê Tài Khoản - Phí Dịch Vụ Tài Khoản Ngân Hàng",
+      "category": "THUÊ TÀI KHOẢN / Basic / KT",
+      "keywords": [
+        "dich vu thue tai khoan - phi dich vu tai khoan ngan hang",
+        "thue tai khoan / basic / kt",
+        "kt-ttk-003-001",
+        "dich vu thue issue",
+        "dich vu thue error",
+        "cannot access dich vu thue",
+        "cannot connect dich vu thue",
+        "support dich vu thue"
+      ],
+      "pic": "Finance Operations Team",
+      "sop": "Follow standard operating procedure.",
+      "sla": "24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Dịch Vụ Thuê Tài Khoản - Phí Dịch Vụ Mở Thẻ VISA BANK",
+      "category": "THUÊ TÀI KHOẢN / Added / KT",
+      "keywords": [
+        "dich vu thue tai khoan - phi dich vu mo the visa bank",
+        "thue tai khoan / added / kt",
+        "kt-ttk-003-002",
+        "dich vu thue issue",
+        "dich vu thue error",
+        "cannot access dich vu thue",
+        "cannot connect dich vu thue",
+        "support dich vu thue"
+      ],
+      "pic": "Finance Operations Team",
+      "sop": "Follow standard operating procedure.",
+      "sla": "24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Dịch Vụ Thuê Tài Khoản - Phí Dịch Vụ Mở Thẻ VISA Pingpong",
+      "category": "THUÊ TÀI KHOẢN / Added / KT",
+      "keywords": [
+        "dich vu thue tai khoan - phi dich vu mo the visa pingpong",
+        "thue tai khoan / added / kt",
+        "kt-ttk-003-003",
+        "dich vu thue issue",
+        "dich vu thue error",
+        "cannot access dich vu thue",
+        "cannot connect dich vu thue",
+        "support dich vu thue"
+      ],
+      "pic": "Agency Operations Team",
+      "sop": "Follow standard operating procedure.",
+      "sla": "24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Dịch Vụ Thuê Tài Khoản - Dịch Vụ Thuê Tài Khoản Vận Chuyển",
+      "category": "THUÊ TÀI KHOẢN / Basic / KT",
+      "keywords": [
+        "dich vu thue tai khoan - dich vu thue tai khoan van chuyen",
+        "thue tai khoan / basic / kt",
+        "kt-ttk-004-001",
+        "dich vu thue issue",
+        "dich vu thue error",
+        "cannot access dich vu thue",
+        "cannot connect dich vu thue",
+        "support dich vu thue"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "Follow standard operating procedure.",
+      "sla": "24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Dịch Vụ Thuê Tài Khoản - Dịch Vụ Thuê Tài Khoản Phần Mềm SSC",
+      "category": "THUÊ TÀI KHOẢN / Basic / KT",
+      "keywords": [
+        "dich vu thue tai khoan - dich vu thue tai khoan phan mem ssc",
+        "thue tai khoan / basic / kt",
+        "kt-ttk-005-001",
+        "dich vu thue issue",
+        "dich vu thue error",
+        "cannot access dich vu thue",
+        "cannot connect dich vu thue",
+        "support dich vu thue"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "Follow standard operating procedure.",
+      "sla": "24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Dịch Vụ Kế Toán - Dịch Vụ Kế Toán Thuế Tại PHIL",
+      "category": "DỊCH VỤ HỖ TRỢ / Added / KT",
+      "keywords": [
+        "dich vu ke toan - dich vu ke toan thue tai phil",
+        "dich vu ho tro / added / kt",
+        "kt-acc-001-001",
+        "dich vu ke issue",
+        "dich vu ke error",
+        "cannot access dich vu ke",
+        "cannot connect dich vu ke",
+        "support dich vu ke"
+      ],
+      "pic": "Commercial Services Team",
+      "sop": "Follow standard operating procedure.",
+      "sla": "24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Dịch Vụ Kế Toán - Dịch Vụ Hỗ Trợ Thủ Tục Thanh Toán",
+      "category": "DỊCH VỤ HỖ TRỢ / Adhoc / KT",
+      "keywords": [
+        "dich vu ke toan - dich vu ho tro thu tuc thanh toan",
+        "dich vu ho tro / adhoc / kt",
+        "kt-acc-001-002",
+        "dich vu ke issue",
+        "dich vu ke error",
+        "cannot access dich vu ke",
+        "cannot connect dich vu ke",
+        "support dich vu ke"
+      ],
+      "pic": "Commercial Services Team",
+      "sop": "Follow standard operating procedure.",
+      "sla": "24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Dịch Vụ Hải QUAN - Dịch Vụ Mở Tờ KHAI Xuất Khẩu",
+      "category": "DỊCH VỤ HỖ TRỢ / Adhoc / KT",
+      "keywords": [
+        "dich vu hai quan - dich vu mo to khai xuat khau",
+        "dich vu ho tro / adhoc / kt",
+        "kt-acc-002-001",
+        "dich vu hai issue",
+        "dich vu hai error",
+        "cannot access dich vu hai",
+        "cannot connect dich vu hai",
+        "support dich vu hai"
+      ],
+      "pic": "Commercial Services Team",
+      "sop": "Follow standard operating procedure.",
+      "sla": "24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Dịch Vụ Hải QUAN - Dịch Vụ Mở Tờ KHAI Nhập Khẩu",
+      "category": "DỊCH VỤ HỖ TRỢ / Adhoc / KT",
+      "keywords": [
+        "dich vu hai quan - dich vu mo to khai nhap khau",
+        "dich vu ho tro / adhoc / kt",
+        "kt-acc-002-002",
+        "dich vu hai issue",
+        "dich vu hai error",
+        "cannot access dich vu hai",
+        "cannot connect dich vu hai",
+        "support dich vu hai"
+      ],
+      "pic": "Commercial Services Team",
+      "sop": "Follow standard operating procedure.",
+      "sla": "24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Dịch Vụ Đăng Ký Doanh Nghiệp - Dịch Vụ Mở Doanh Nghiệp",
+      "category": "DỊCH VỤ HỖ TRỢ / Added / KT",
+      "keywords": [
+        "dich vu dang ky doanh nghiep - dich vu mo doanh nghiep",
+        "dich vu ho tro / added / kt",
+        "kt-acc-003-001",
+        "dich vu dang issue",
+        "dich vu dang error",
+        "cannot access dich vu dang",
+        "cannot connect dich vu dang",
+        "support dich vu dang"
+      ],
+      "pic": "Commercial Services Team",
+      "sop": "Follow standard operating procedure.",
+      "sla": "24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Dịch Vụ Đăng Ký Doanh Nghiệp - Dịch Vụ GIA Hạn Hàng Năm",
+      "category": "DỊCH VỤ HỖ TRỢ / Added / KT",
+      "keywords": [
+        "dich vu dang ky doanh nghiep - dich vu gia han hang nam",
+        "dich vu ho tro / added / kt",
+        "kt-acc-003-002",
+        "dich vu dang issue",
+        "dich vu dang error",
+        "cannot access dich vu dang",
+        "cannot connect dich vu dang",
+        "support dich vu dang"
+      ],
+      "pic": "Commercial Services Team",
+      "sop": "Follow standard operating procedure.",
+      "sla": "24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Dịch Vụ Đăng Ký Doanh Nghiệp - Dịch Vụ Đóng Doanh Nghiệp",
+      "category": "DỊCH VỤ HỖ TRỢ / Added / KT",
+      "keywords": [
+        "dich vu dang ky doanh nghiep - dich vu dong doanh nghiep",
+        "dich vu ho tro / added / kt",
+        "kt-acc-003-003",
+        "dich vu dang issue",
+        "dich vu dang error",
+        "cannot access dich vu dang",
+        "cannot connect dich vu dang",
+        "support dich vu dang"
+      ],
+      "pic": "Commercial Services Team",
+      "sop": "Follow standard operating procedure.",
+      "sla": "24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Dịch Vụ XIN Giấy Phép CON - Dịch Vụ XIN Giấy Phép FDA",
+      "category": "DỊCH VỤ HỖ TRỢ / Adhoc / KT",
+      "keywords": [
+        "dich vu xin giay phep con - dich vu xin giay phep fda",
+        "dich vu ho tro / adhoc / kt",
+        "kt-acc-004-001",
+        "dich vu xin issue",
+        "dich vu xin error",
+        "cannot access dich vu xin",
+        "cannot connect dich vu xin",
+        "support dich vu xin"
+      ],
+      "pic": "Commercial Services Team",
+      "sop": "Follow standard operating procedure.",
+      "sla": "24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Dịch Vụ XIN Giấy Phép CON - Dịch Vụ XIN Giấy Phép LTO",
+      "category": "DỊCH VỤ HỖ TRỢ / Adhoc / KT",
+      "keywords": [
+        "dich vu xin giay phep con - dich vu xin giay phep lto",
+        "dich vu ho tro / adhoc / kt",
+        "kt-acc-004-002",
+        "dich vu xin issue",
+        "dich vu xin error",
+        "cannot access dich vu xin",
+        "cannot connect dich vu xin",
+        "support dich vu xin"
+      ],
+      "pic": "Commercial Services Team",
+      "sop": "Follow standard operating procedure.",
+      "sla": "24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Tiền Thuế Nộp THAY - Thuế",
+      "category": "THUẾ NỘP THAY / Basic / KT",
+      "keywords": [
+        "tien thue nop thay - thue",
+        "thue nop thay / basic / kt",
+        "kt-tax-001-000",
+        "tien thue nop issue",
+        "tien thue nop error",
+        "cannot access tien thue nop",
+        "cannot connect tien thue nop",
+        "support tien thue nop"
+      ],
+      "pic": "Finance Operations Team",
+      "sop": "Follow standard operating procedure.",
+      "sla": "24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Tiền Thuế Nộp THAY - Thuế TNDN",
+      "category": "THUẾ NỘP THAY / Added / KT",
+      "keywords": [
+        "tien thue nop thay - thue tndn",
+        "thue nop thay / added / kt",
+        "kt-tax-001-001",
+        "tien thue nop issue",
+        "tien thue nop error",
+        "cannot access tien thue nop",
+        "cannot connect tien thue nop",
+        "support tien thue nop"
+      ],
+      "pic": "Finance Operations Team",
+      "sop": "Follow standard operating procedure.",
+      "sla": "24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Tiền Thuế Nộp THAY - Thuế Khấu Trừ (wht)",
+      "category": "THUẾ NỘP THAY / Added / KT",
+      "keywords": [
+        "tien thue nop thay - thue khau tru wht",
+        "thue nop thay / added / kt",
+        "kt-tax-001-002",
+        "tien thue nop issue",
+        "tien thue nop error",
+        "cannot access tien thue nop",
+        "cannot connect tien thue nop",
+        "support tien thue nop"
+      ],
+      "pic": "Finance Operations Team",
+      "sop": "Follow standard operating procedure.",
+      "sla": "24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Tiền Thuế Nộp THAY - Thuế GTGT (vat)",
+      "category": "THUẾ NỘP THAY / Added / KT",
+      "keywords": [
+        "tien thue nop thay - thue gtgt vat",
+        "thue nop thay / added / kt",
+        "kt-tax-001-003",
+        "tien thue nop issue",
+        "tien thue nop error",
+        "cannot access tien thue nop",
+        "cannot connect tien thue nop",
+        "support tien thue nop"
+      ],
+      "pic": "Finance Operations Team",
+      "sop": "Follow standard operating procedure.",
+      "sla": "24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Tiền Thuế Nộp THAY - Thuế Nhà Thầu (fct)",
+      "category": "THUẾ NỘP THAY / Adhoc / KT",
+      "keywords": [
+        "tien thue nop thay - thue nha thau fct",
+        "thue nop thay / adhoc / kt",
+        "kt-tax-001-004",
+        "tien thue nop issue",
+        "tien thue nop error",
+        "cannot access tien thue nop",
+        "cannot connect tien thue nop",
+        "support tien thue nop"
+      ],
+      "pic": "Finance Operations Team",
+      "sop": "Follow standard operating procedure.",
+      "sla": "24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Dịch Vụ Mở Tài Khoản Shopee, Lazada, Tiktok - Dịch Vụ Mở Tài Khoản Shopee, Lazada, Tiktok",
+      "category": "TK SHOPEE LAZADA TIKTOK / Added / KT",
+      "keywords": [
+        "dich vu mo tai khoan shopee lazada tiktok - dich vu mo tai khoan shopee lazada tiktok",
+        "tk shopee lazada tiktok / added / kt",
+        "dich vu mo issue",
+        "dich vu mo error",
+        "cannot access dich vu mo",
+        "cannot connect dich vu mo",
+        "support dich vu mo"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "Follow standard operating procedure.",
+      "sla": "24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Dịch Vụ Thuê Tài Khoản - Dịch Vụ Thuê Tài Khoản Vận Chuyển",
+      "category": "THUÊ TÀI KHOẢN VẬN CHUYỂN / Basic / KT",
+      "keywords": [
+        "dich vu thue tai khoan - dich vu thue tai khoan van chuyen",
+        "thue tai khoan van chuyen / basic / kt",
+        "dich vu thue issue",
+        "dich vu thue error",
+        "cannot access dich vu thue",
+        "cannot connect dich vu thue",
+        "support dich vu thue"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "Follow standard operating procedure.",
+      "sla": "24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Dịch Vụ FFM KHO - Phí Bốc Dỡ Hàng",
+      "category": "FFM BỐC DỠ HÀNG / Added / KT",
+      "keywords": [
+        "dich vu ffm kho - phi boc do hang",
+        "ffm boc do hang / added / kt",
+        "dich vu ffm issue",
+        "dich vu ffm error",
+        "cannot access dich vu ffm",
+        "cannot connect dich vu ffm",
+        "support dich vu ffm"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "Follow standard operating procedure.",
+      "sla": "24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Dịch Vụ FFM KHO - Phí Vận Chuyển RA Bưu Cục",
+      "category": "FFM VẬN CHUYỂN RA BƯU CỤC / Added / KT",
+      "keywords": [
+        "dich vu ffm kho - phi van chuyen ra buu cuc",
+        "ffm van chuyen ra buu cuc / added / kt",
+        "dich vu ffm issue",
+        "dich vu ffm error",
+        "cannot access dich vu ffm",
+        "cannot connect dich vu ffm",
+        "support dich vu ffm"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "Follow standard operating procedure.",
+      "sla": "24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Dịch Vụ FFM KHO - Phí BAO Bì Sản Phầm",
+      "category": "FFM BAO BÌ SẢN PHẨM / Added / KT",
+      "keywords": [
+        "dich vu ffm kho - phi bao bi san pham",
+        "ffm bao bi san pham / added / kt",
+        "dich vu ffm issue",
+        "dich vu ffm error",
+        "cannot access dich vu ffm",
+        "cannot connect dich vu ffm",
+        "support dich vu ffm"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "Follow standard operating procedure.",
+      "sla": "24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Dịch Vụ FFM - Dịch Vụ FFM CSKH",
+      "category": "FFM CSKH / Basic / KT",
+      "keywords": [
+        "dich vu ffm - dich vu ffm cskh",
+        "ffm cskh / basic / kt",
+        "dich vu ffm issue",
+        "dich vu ffm error",
+        "cannot access dich vu ffm",
+        "cannot connect dich vu ffm",
+        "support dich vu ffm"
+      ],
+      "pic": "Finance Operations Team",
+      "sop": "- Xử lý file đối soát với ĐVVC\n- Thu phí dịch vụ KH\n- Đối soát các khoản thu - chi phát sinh\n- Check bill - Thanh toán hộ KH",
+      "sla": "24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Phí Hộp Gói Hàng - Phí Hộp Gói Hàng",
+      "category": "FFM HỘP GÓI HÀNG / Basic / KT",
+      "keywords": [
+        "phi hop goi hang - phi hop goi hang",
+        "ffm hop goi hang / basic / kt",
+        "phi hop goi issue",
+        "phi hop goi error",
+        "cannot access phi hop goi",
+        "cannot connect phi hop goi",
+        "support phi hop goi"
+      ],
+      "pic": "Commercial Services Team",
+      "sop": "Follow standard operating procedure.",
+      "sla": "24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Dịch Vụ FFM KHO - Dịch Vụ FFM KHO",
+      "category": "FFM KHO / Basic / KT",
+      "keywords": [
+        "dich vu ffm kho - dich vu ffm kho",
+        "ffm kho / basic / kt",
+        "dich vu ffm issue",
+        "dich vu ffm error",
+        "cannot access dich vu ffm",
+        "cannot connect dich vu ffm",
+        "support dich vu ffm"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "Follow standard operating procedure.",
+      "sla": "24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Dịch Vụ FFM - Dịch Vụ FFM KHO - CSKH",
+      "category": "FFM KHO CSKH / Basic / KT",
+      "keywords": [
+        "dich vu ffm - dich vu ffm kho - cskh",
+        "ffm kho cskh / basic / kt",
+        "dich vu ffm issue",
+        "dich vu ffm error",
+        "cannot access dich vu ffm",
+        "cannot connect dich vu ffm",
+        "support dich vu ffm"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "Follow standard operating procedure.",
+      "sla": "24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Dịch Vụ FFM - Dịch Vụ FFM KHO - SALE",
+      "category": "FFM KHO SALE / Basic / KT",
+      "keywords": [
+        "dich vu ffm - dich vu ffm kho - sale",
+        "ffm kho sale / basic / kt",
+        "dich vu ffm issue",
+        "dich vu ffm error",
+        "cannot access dich vu ffm",
+        "cannot connect dich vu ffm",
+        "support dich vu ffm"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "Follow standard operating procedure.",
+      "sla": "24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Dịch Vụ FFM - Dịch Vụ FFM KHO - SALE - CSKH",
+      "category": "FFM KHO SALE CSKH / Basic / KT",
+      "keywords": [
+        "dich vu ffm - dich vu ffm kho - sale - cskh",
+        "ffm kho sale cskh / basic / kt",
+        "dich vu ffm issue",
+        "dich vu ffm error",
+        "cannot access dich vu ffm",
+        "cannot connect dich vu ffm",
+        "support dich vu ffm"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "Follow standard operating procedure.",
+      "sla": "24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Dịch Vụ FFM - Dịch Vụ FFM SALE",
+      "category": "FFM SALE / Basic / KT",
+      "keywords": [
+        "dich vu ffm - dich vu ffm sale",
+        "ffm sale / basic / kt",
+        "dich vu ffm issue",
+        "dich vu ffm error",
+        "cannot access dich vu ffm",
+        "cannot connect dich vu ffm",
+        "support dich vu ffm"
+      ],
+      "pic": "Commercial Services Team",
+      "sop": "Follow standard operating procedure.",
+      "sla": "24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Dịch Vụ FFM - Dịch Vụ FFM SALE - CSKH",
+      "category": "FFM SALE CSKH / Basic / KT",
+      "keywords": [
+        "dich vu ffm - dich vu ffm sale - cskh",
+        "ffm sale cskh / basic / kt",
+        "dich vu ffm issue",
+        "dich vu ffm error",
+        "cannot access dich vu ffm",
+        "cannot connect dich vu ffm",
+        "support dich vu ffm"
+      ],
+      "pic": "Commercial Services Team",
+      "sop": "Follow standard operating procedure.",
+      "sla": "24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Dịch Vụ FFM - Dịch Vụ Thuê Tài Khoản & Vận Đơn",
+      "category": "FFM THUÊ TÀI KHOẢN & VẬN ĐƠN / Basic / KT",
+      "keywords": [
+        "dich vu ffm - dich vu thue tai khoan van don",
+        "ffm thue tai khoan van don / basic / kt",
+        "dich vu ffm issue",
+        "dich vu ffm error",
+        "cannot access dich vu ffm",
+        "cannot connect dich vu ffm",
+        "support dich vu ffm"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "Follow standard operating procedure.",
+      "sla": "24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Dịch Vụ FFM - Dịch Vụ Thuê Tài Khoản & Vận Đơn & SALE",
+      "category": "FFM THUÊ TÀI KHOẢN, VẬN ĐƠN, SALE / Basic / KT",
+      "keywords": [
+        "dich vu ffm - dich vu thue tai khoan van don sale",
+        "ffm thue tai khoan van don sale / basic / kt",
+        "dich vu ffm issue",
+        "dich vu ffm error",
+        "cannot access dich vu ffm",
+        "cannot connect dich vu ffm",
+        "support dich vu ffm"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "Follow standard operating procedure.",
+      "sla": "24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Dịch Vụ FFM - THU Từ Chênh Lệch Phải THU - Phải Trả Đvvc",
+      "category": "FFM THU PHÍ VẬN CHUYỂN / Basic / KT",
+      "keywords": [
+        "dich vu ffm - thu tu chenh lech phai thu - phai tra dvvc",
+        "ffm thu phi van chuyen / basic / kt",
+        "dich vu ffm issue",
+        "dich vu ffm error",
+        "cannot access dich vu ffm",
+        "cannot connect dich vu ffm",
+        "support dich vu ffm"
+      ],
+      "pic": "Finance Operations Team",
+      "sop": "Follow standard operating procedure.",
+      "sla": "24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Dịch Vụ FFM - Phụ THU Hàng Vpcs/tpcn",
+      "category": "PHỤ THU HÀNG VPCS/TPCN / Adhoc / KT",
+      "keywords": [
+        "dich vu ffm - phu thu hang vpcs/tpcn",
+        "phu thu hang vpcs/tpcn / adhoc / kt",
+        "dich vu ffm issue",
+        "dich vu ffm error",
+        "cannot access dich vu ffm",
+        "cannot connect dich vu ffm",
+        "support dich vu ffm"
+      ],
+      "pic": "Commercial Services Team",
+      "sop": "Follow standard operating procedure.",
+      "sla": "24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Setup - Script & FLOW - Basic",
+      "category": "Telesale",
+      "keywords": [
+        "setup - script flow - basic",
+        "telesale",
+        "ts-set-01",
+        "setup script flow issue",
+        "setup script flow error",
+        "cannot access setup script flow",
+        "cannot connect setup script flow",
+        "support setup script flow"
+      ],
+      "pic": "Telesales Team",
+      "sop": "Thiết kế kịch bản gọi + flow xử lý từ chối + checklist data",
+      "sla": "Hoàn tất trong 2 ngày làm việc",
+      "priority_rules": "Medium - Default Medium priority. Raise to High if the request impacts live operations, customer commitments, or urgent delivery milestones."
+    },
+    {
+      "service_name": "Setup - Training Agent - Basic",
+      "category": "Telesale",
+      "keywords": [
+        "setup - training agent - basic",
+        "telesale",
+        "ts-set-02",
+        "setup training agent issue",
+        "setup training agent error",
+        "cannot access setup training agent",
+        "cannot connect setup training agent",
+        "support setup training agent"
+      ],
+      "pic": "Telesales Team",
+      "sop": "Đào tạo agent 1 buổi: sản phẩm, quy trình, chốt đơn, xử lý tình huống",
+      "sla": "Training xong test đạt ≥80%",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Setup - Crm/sheet Template - Basic",
+      "category": "Telesale",
+      "keywords": [
+        "setup - crm/sheet template - basic",
+        "telesale",
+        "ts-set-03",
+        "setup crm/sheet template issue",
+        "setup crm/sheet template error",
+        "cannot access setup crm/sheet template",
+        "cannot connect setup crm/sheet template",
+        "support setup crm/sheet template"
+      ],
+      "pic": "Telesales Team",
+      "sop": "Set up form/Google Sheet/CRM field chuẩn hoá đơn + trạng thái",
+      "sla": "Hoàn tất trong 2 ngày làm việc",
+      "priority_rules": "Medium - Default Medium priority. Raise to High if the request impacts live operations, customer commitments, or urgent delivery milestones."
+    },
+    {
+      "service_name": "Operation - Outbound Calling - Standard",
+      "category": "Telesale",
+      "keywords": [
+        "operation - outbound calling - standard",
+        "telesale",
+        "ts-ops-01",
+        "operation outbound calling issue",
+        "operation outbound calling error",
+        "cannot access operation outbound calling",
+        "cannot connect operation outbound calling",
+        "support operation outbound calling"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "Gọi xác nhận đơn COD theo data khách cung cấp, kiểm tra sản phẩm, số lượng, giá, địa chỉ giao hàng",
+      "sla": "Đi đúng khung giờ gọi + cập nhật trạng thái 100%",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Operation - Outbound Calling - Add-on",
+      "category": "Telesale",
+      "keywords": [
+        "operation - outbound calling - add-on",
+        "telesale",
+        "ts-ops-07",
+        "operation outbound calling issue",
+        "operation outbound calling error",
+        "cannot access operation outbound calling",
+        "cannot connect operation outbound calling",
+        "support operation outbound calling"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "Gọi ngoài giờ hành chính theo yêu cầu khách hàng",
+      "sla": "Báo trước ít nhất 4h, đảm bảo đủ staffing",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Operation - Inbound Handling - Standard",
+      "category": "Telesale",
+      "keywords": [
+        "operation - inbound handling - standard",
+        "telesale",
+        "ts-ops-02",
+        "operation inbound handling issue",
+        "operation inbound handling error",
+        "cannot access operation inbound handling",
+        "cannot connect operation inbound handling",
+        "support operation inbound handling"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "Nhận cuộc gọi inbound, tư vấn và chốt đơn theo SOP",
+      "sla": "24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Operation - Order Confirmation - Standard",
+      "category": "Telesale",
+      "keywords": [
+        "operation - order confirmation - standard",
+        "telesale",
+        "ts-ops-03",
+        "operation order confirmation issue",
+        "operation order confirmation error",
+        "cannot access operation order confirmation",
+        "cannot connect operation order confirmation",
+        "support operation order confirmation"
+      ],
+      "pic": "Telesales Team",
+      "sop": "Xác nhận đơn (COD) + chốt địa chỉ\nBổ sung thông tin thiếu (địa chỉ, tỉnh/TP, combo, COD) theo nguồn hợp lệ",
+      "sla": "Xác nhận trong 4h (giờ làm việc)",
+      "priority_rules": "Medium - Default Medium priority. Raise to High if the request impacts live operations, customer commitments, or urgent delivery milestones."
+    },
+    {
+      "service_name": "Operation - Reschedule/recall - Add-on",
+      "category": "Telesale",
+      "keywords": [
+        "operation - reschedule/recall - add-on",
+        "telesale",
+        "ts-ops-04",
+        "operation reschedule/recall add-on issue",
+        "operation reschedule/recall add-on error",
+        "cannot access operation reschedule/recall add-on",
+        "cannot connect operation reschedule/recall add-on",
+        "support operation reschedule/recall add-on"
+      ],
+      "pic": "Telesales Team",
+      "sop": "Gọi lại xử lý đơn pending, hẹn giao lại, đổi thời gian nhận",
+      "sla": "Tối đa 3 lần gọi/đơn trong 3 ngày liên tiếp",
+      "priority_rules": "Medium - Default Medium priority. Raise to High if the request impacts live operations, customer commitments, or urgent delivery milestones."
+    },
+    {
+      "service_name": "Operation - Address Verification - Add-on",
+      "category": "Telesale",
+      "keywords": [
+        "operation - address verification - add-on",
+        "telesale",
+        "ts-ops-05",
+        "operation address verification issue",
+        "operation address verification error",
+        "cannot access operation address verification",
+        "cannot connect operation address verification",
+        "support operation address verification"
+      ],
+      "pic": "Telesales Team",
+      "sop": "Xác minh địa chỉ: tỉnh/TP, quận/huyện, barangay/ward, landmark",
+      "sla": "Tỷ lệ sai địa chỉ do agent ≤1%",
+      "priority_rules": "Medium - Default Medium priority. Raise to High if the request impacts live operations, customer commitments, or urgent delivery milestones."
+    },
+    {
+      "service_name": "Operation - Upsell/cross-sell - Add-on",
+      "category": "Telesale",
+      "keywords": [
+        "operation - upsell/cross-sell - add-on",
+        "telesale",
+        "ts-ops-06",
+        "operation upsell/cross-sell add-on issue",
+        "operation upsell/cross-sell add-on error",
+        "cannot access operation upsell/cross-sell add-on",
+        "cannot connect operation upsell/cross-sell add-on",
+        "support operation upsell/cross-sell add-on"
+      ],
+      "pic": "Telesales Team",
+      "sop": "Chạy upsell/cross-sell theo rule (combo, mua kèm)\nTư vấn mua thêm sản phẩm theo kịch bản",
+      "sla": "Báo cáo upsell theo ngày",
+      "priority_rules": "Medium - Default Medium priority. Raise to High if the request impacts live operations, customer commitments, or urgent delivery milestones."
+    },
+    {
+      "service_name": "Operation - Seeding Order Support - Standard",
+      "category": "Telesale",
+      "keywords": [
+        "operation - seeding order support - standard",
+        "operation - seeding order  - standard",
+        "telesale",
+        "ts-ops-07",
+        "operation seeding order issue",
+        "operation seeding order error",
+        "cannot access operation seeding order",
+        "cannot connect operation seeding order",
+        "support operation seeding order"
+      ],
+      "pic": "Business Development Team",
+      "sop": "Hỗ trợ seller thực hiện seeding đơn hàng",
+      "sla": "Trong 24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Operation - Standard",
+      "category": "Telesale",
+      "keywords": [
+        "operation - standard",
+        "telesale",
+        "ts-ops-08",
+        "operation standard issue",
+        "operation standard error",
+        "cannot access operation standard",
+        "cannot connect operation standard",
+        "support operation standard"
+      ],
+      "pic": "Telesales Team",
+      "sop": "Quản lý sim hộ khách hàng",
+      "sla": "Chưa có",
+      "priority_rules": "Medium - Default Medium priority. Raise to High if the request impacts live operations, customer commitments, or urgent delivery milestones."
+    },
+    {
+      "service_name": "Reporting - Daily Report - Basic",
+      "category": "Telesale",
+      "keywords": [
+        "reporting - daily report - basic",
+        "telesale",
+        "ts-rep-01",
+        "reporting daily report issue",
+        "reporting daily report error",
+        "cannot access reporting daily report",
+        "cannot connect reporting daily report",
+        "support reporting daily report"
+      ],
+      "pic": "Telesales Team",
+      "sop": "Báo cáo ngày: calls, connect rate, confirm rate, pending, RTO reason",
+      "sla": "Gửi trước 10:30 sáng hôm sau",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "DATA - DATA Cleaning - Basic",
+      "category": "Telesale",
+      "keywords": [
+        "data - data cleaning - basic",
+        "telesale",
+        "ts-data-01",
+        "data data cleaning issue",
+        "data data cleaning error",
+        "cannot access data data cleaning",
+        "cannot connect data data cleaning",
+        "support data data cleaning"
+      ],
+      "pic": "Telesales Team",
+      "sop": "Lọc data trùng",
+      "sla": "Done trong 6-8h tuỳ volume",
+      "priority_rules": "Medium - Default Medium priority. Raise to High if the request impacts live operations, customer commitments, or urgent delivery milestones."
+    },
+    {
+      "service_name": "System - Autodialer Setup - Premium",
+      "category": "Telesale",
+      "keywords": [
+        "system - autodialer setup - premium",
+        "telesale",
+        "ts-auto-01",
+        "system autodialer setup issue",
+        "system autodialer setup error",
+        "cannot access system autodialer setup",
+        "cannot connect system autodialer setup",
+        "support system autodialer setup"
+      ],
+      "pic": "Telesales Team",
+      "sop": "Cài đặt/thiết lập campaign autodialer, routing, disposition, recording",
+      "sla": "Go-live trong 2–3 ngày làm việc",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "QA & Monitoring - CALL Recording Review - Add-on",
+      "category": "Telesale",
+      "keywords": [
+        "qa monitoring - call recording review - add-on",
+        "telesale",
+        "ts-qa-01",
+        "qa monitoring call issue",
+        "qa monitoring call error",
+        "cannot access qa monitoring call",
+        "cannot connect qa monitoring call",
+        "support qa monitoring call"
+      ],
+      "pic": "Telesales Team",
+      "sop": "Kiểm tra chất lượng cuộc gọi theo form QA nội bộ",
+      "sla": "Phản hồi QA trong 48h",
+      "priority_rules": "Medium - Default Medium priority. Raise to High if the request impacts live operations, customer commitments, or urgent delivery milestones."
+    },
+    {
+      "service_name": "QA & Monitoring - Coaching Agent - Add-on",
+      "category": "Telesale",
+      "keywords": [
+        "qa monitoring - coaching agent - add-on",
+        "telesale",
+        "ts-qa-02",
+        "qa monitoring coaching issue",
+        "qa monitoring coaching error",
+        "cannot access qa monitoring coaching",
+        "cannot connect qa monitoring coaching",
+        "support qa monitoring coaching"
+      ],
+      "pic": "Telesales Team",
+      "sop": "Đào tạo lại agent dựa trên lỗi QA",
+      "sla": "Cải thiện KPI theo kế hoạch tuần",
+      "priority_rules": "Medium - Default Medium priority. Raise to High if the request impacts live operations, customer commitments, or urgent delivery milestones."
+    },
+    {
+      "service_name": "Setup - Script & FLOW - Basic",
+      "category": "Telesale / Tele& CSR",
+      "keywords": [
+        "setup - script flow - basic",
+        "telesale / tele csr",
+        "ts-set-01",
+        "setup script flow issue",
+        "setup script flow error",
+        "cannot access setup script flow",
+        "cannot connect setup script flow",
+        "support setup script flow"
+      ],
+      "pic": "Tele-CSR Operations Team",
+      "sop": "Xây dựng Call Crip, Bộ Q&A xử lý từ chối và Flow chart quy trình Telesale",
+      "sla": "Hoàn thành trong 2 ngày làm việc",
+      "priority_rules": "Medium - Default Medium priority. Raise to High if the request impacts live operations, customer commitments, or urgent delivery milestones."
+    },
+    {
+      "service_name": "Setup - Training Agent - Basic",
+      "category": "Telesale / Tele& CSR",
+      "keywords": [
+        "setup - training agent - basic",
+        "telesale / tele csr",
+        "ts-set-02",
+        "setup training agent issue",
+        "setup training agent error",
+        "cannot access setup training agent",
+        "cannot connect setup training agent",
+        "support setup training agent"
+      ],
+      "pic": "Tele-CSR Operations Team",
+      "sop": "Đào tạo Tổng quan sản phẩm (nếu có) & Các Kỹ năng cần thiết & Quy trình làm việc",
+      "sla": "Hoàn thành bài Test sau đào tạo với kết quả >=80%",
+      "priority_rules": "Medium - Default Medium priority. Raise to High if the request impacts live operations, customer commitments, or urgent delivery milestones."
+    },
+    {
+      "service_name": "Setup - Reporting - Basic",
+      "category": "Telesale / Tele& CSR",
+      "keywords": [
+        "setup - reporting - basic",
+        "telesale / tele csr",
+        "ts-set-03",
+        "setup reporting basic issue",
+        "setup reporting basic error",
+        "cannot access setup reporting basic",
+        "cannot connect setup reporting basic",
+        "support setup reporting basic"
+      ],
+      "pic": "Tele-CSR Operations Team",
+      "sop": "Hỗ trợ thiết lập các Template báo cáo (Google Sheet/ Power BI/ Looker Studio..) \nDaily Report: calls, connect rate, confirm rate, pending, RTO reason",
+      "sla": "Hoàn tất biểu mẫu  trong 2 ngày làm việc.\nDaily Report gửi trước 10h30 hàng ngày.",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Setup - Oms/ CRM - Premium",
+      "category": "Telesale / Tele& CSR",
+      "keywords": [
+        "setup - oms/ crm - premium",
+        "telesale / tele csr",
+        "ts-set-04",
+        "setup oms/ crm issue",
+        "setup oms/ crm error",
+        "cannot access setup oms/ crm",
+        "cannot connect setup oms/ crm",
+        "support setup oms/ crm"
+      ],
+      "pic": "Tele-CSR Operations Team",
+      "sop": "Hỗ trợ giải pháp lưu trữ dự liệu và thiết lập Report tự động qua hệ thống OMS/ CRM",
+      "sla": "Hoàn tất trong 7 ngày làm việc",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Setup - CALL Center - Premium",
+      "category": "Telesale / Tele& CSR",
+      "keywords": [
+        "setup - call center - premium",
+        "telesale / tele csr",
+        "ts-set-05",
+        "setup call center issue",
+        "setup call center error",
+        "cannot access setup call center",
+        "cannot connect setup call center",
+        "support setup call center"
+      ],
+      "pic": "Tele-CSR Operations Team",
+      "sop": "Hỗ trợ giải pháp Call Center (Auto dial)",
+      "sla": "Hoàn tất trong 7 ngày làm việc. (Đang hỗ trợ cho thị trường Phi)",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "DATA Processing - DATA Cleaning - Standard",
+      "category": "Telesale / Tele& CSR",
+      "keywords": [
+        "data processing - data cleaning - standard",
+        "telesale / tele csr",
+        "ts-dps",
+        "data processing data issue",
+        "data processing data error",
+        "cannot access data processing data",
+        "cannot connect data processing data",
+        "support data processing data"
+      ],
+      "pic": "Tele-CSR Operations Team",
+      "sop": "-Check trùng (Duplicate Check)\n-Lọc data rác (Fake/Spam Data Filtering)",
+      "sla": "Đi đúng khung giờ gọi + cập nhật trạng thái 100%",
+      "priority_rules": "Medium - Default Medium priority. Raise to High if the request impacts live operations, customer commitments, or urgent delivery milestones."
+    },
+    {
+      "service_name": "CALL Operations - CALL Processing - Standard",
+      "category": "Telesale / Tele& CSR",
+      "keywords": [
+        "call operations - call processing - standard",
+        "telesale / tele csr",
+        "ts-ops",
+        "call operations call issue",
+        "call operations call error",
+        "cannot access call operations call",
+        "cannot connect call operations call",
+        "support call operations call"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "Gọi điện trên tệp data được phân công (Assign)",
+      "sla": "-Thực hiện tối đa 9 lần gọi / 3 ngày, tương ứng 3 lần/ ngày vào các khung giờ khác nhau với các data không liên lạc được.\n-100% data được xử lý lần đầu trong vòng ....kể từ khi được phân công.\n-Cập nhật trạng thái chi tiết và lý do từ chối (nếu có) lên hệ thống/ File Google sheet sau mỗi cuộc gọi.\n-  Cam kết bảo mật cho thông tin khách hàng.",
+      "priority_rules": "Medium - Default Medium priority. Raise to High if the request impacts live operations, customer commitments, or urgent delivery milestones."
+    },
+    {
+      "service_name": "Sales Operations - Tele-consultation - Premium",
+      "category": "Telesale / Tele& CSR",
+      "keywords": [
+        "sales operations - tele-consultation - premium",
+        "telesale / tele csr",
+        "ts-sos 1",
+        "sales operations tele-consultation issue",
+        "sales operations tele-consultation error",
+        "cannot access sales operations tele-consultation",
+        "cannot connect sales operations tele-consultation",
+        "support sales operations tele-consultation"
+      ],
+      "pic": "Tele-CSR Operations Team",
+      "sop": "Gọi điện trên tệp data được phân công (Assign) và chốt sale ( Upsell/ Cross sell)",
+      "sla": "Tỷ lệ chốt/ Data",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Sales Operations - Messenger Sales - Premium",
+      "category": "Telesale / Tele& CSR",
+      "keywords": [
+        "sales operations - messenger sales - premium",
+        "telesale / tele csr",
+        "ts-sos 2",
+        "sales operations messenger issue",
+        "sales operations messenger error",
+        "cannot access sales operations messenger",
+        "cannot connect sales operations messenger",
+        "support sales operations messenger"
+      ],
+      "pic": "Tele-CSR Operations Team",
+      "sop": "Tiếp nhận tin nhắn khách hàng, thực hiện tư vấn và chốt sale qua Chat Inbox (sử dụng Pancake)",
+      "sla": "Tỷ lệ chốt/ Data",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Order Confirmation - Order Verification (fill-in) - Basic",
+      "category": "Telesale / Tele& CSR",
+      "keywords": [
+        "order confirmation - order verification fill-in - basic",
+        "telesale / tele csr",
+        "ts-ocs1",
+        "order confirmation order issue",
+        "order confirmation order error",
+        "cannot access order confirmation order",
+        "cannot connect order confirmation order",
+        "support order confirmation order"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "Xác minh đơn hàng (không qua cuộc gọi). Bao gồm: xác minh địa chỉ chính xác: tỉnh/TP, quận/huyện, barangay/ward, landmark.; nhập thông tin SP, số lượng, giá.",
+      "sla": "Tỷ lệ sai địa chỉ do agent ≤1%",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Order Confirmation - Confirmation CALL - Standard",
+      "category": "Telesale / Tele& CSR",
+      "keywords": [
+        "order confirmation - confirmation call - standard",
+        "telesale / tele csr",
+        "ts-ocs2",
+        "order confirmation confirmation issue",
+        "order confirmation confirmation error",
+        "cannot access order confirmation confirmation",
+        "cannot connect order confirmation confirmation",
+        "support order confirmation confirmation"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "Gọi xác nhận đơn, theo data Seller cung cấp. Xác nhận đúng sản phẩm, số lượng, giá, địa chỉ giao hàng trước khi chuyển sang cho ĐVVC\n- Confirmation Call\n- Address Verification\n-Recall: Thực hiện gọi lại với các số điện thoại không kết nối được sau cuộc gọi lần 1.  \n-Lead Recycling: Xử lý lại các data cũ, data bị từ chối trước đó để tăng tỷ lệ chốt đơn.",
+      "sla": "1/ Tỷ lệ Confirm tại các thị trường:\n2/ Tần suất Call: tối đa 9 lần gọi/ 3 ngày liên tiếp, 3 lần/ ngày.",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "QA & Monitoring - CALL Scoring - Premium",
+      "category": "Telesale / Tele& CSR",
+      "keywords": [
+        "qa monitoring - call scoring - premium",
+        "telesale / tele csr",
+        "ts-qa1",
+        "qa monitoring call issue",
+        "qa monitoring call error",
+        "cannot access qa monitoring call",
+        "cannot connect qa monitoring call",
+        "support qa monitoring call"
+      ],
+      "pic": "Tele-CSR Operations Team",
+      "sop": "Check Record và đámh giá chất lượng tư vấn",
+      "sla": "Phản hồi QA trong 48h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "QA & Monitoring - Coaching Agent - Premium",
+      "category": "Telesale / Tele& CSR",
+      "keywords": [
+        "qa monitoring - coaching agent - premium",
+        "telesale / tele csr",
+        "ts-qa2",
+        "qa monitoring coaching issue",
+        "qa monitoring coaching error",
+        "cannot access qa monitoring coaching",
+        "cannot connect qa monitoring coaching",
+        "support qa monitoring coaching"
+      ],
+      "pic": "Tele-CSR Operations Team",
+      "sop": "Đào tạo lại agent dựa trên lỗi QA",
+      "sla": "Cải thiện KPI theo kế hoạch tuần",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Adhoc Support - Basic Seeding - Basic",
+      "category": "Telesale / Tele& CSR",
+      "keywords": [
+        "adhoc support - basic seeding - basic",
+        "adhoc  - basic seeding - basic",
+        "telesale / tele csr",
+        "ts-sup 1",
+        "adhoc basic seeding issue",
+        "adhoc basic seeding error",
+        "cannot access adhoc basic seeding",
+        "cannot connect adhoc basic seeding",
+        "support adhoc basic seeding"
+      ],
+      "pic": "Business Development Team",
+      "sop": "Chỉ like, thả tim hoặc cmt icon/ câu ngắn",
+      "sla": "24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Adhoc Support - Premium Seeding - Premium",
+      "category": "Telesale / Tele& CSR",
+      "keywords": [
+        "adhoc support - premium seeding - premium",
+        "adhoc  - premium seeding - premium",
+        "telesale / tele csr",
+        "ts-sup 2",
+        "adhoc premium seeding issue",
+        "adhoc premium seeding error",
+        "cannot access adhoc premium seeding",
+        "cannot connect adhoc premium seeding",
+        "support adhoc premium seeding"
+      ],
+      "pic": "Business Development Team",
+      "sop": "Cmt dài/ có hình ảnh minh họa, điều hướng khách về Inbox",
+      "sla": "24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Adhoc Support - Adhoc Outbound CALL - Standard",
+      "category": "Telesale / Tele& CSR",
+      "keywords": [
+        "adhoc support - adhoc outbound call - standard",
+        "adhoc  - adhoc outbound call - standard",
+        "telesale / tele csr",
+        "ts-sup 3",
+        "adhoc adhoc outbound issue",
+        "adhoc adhoc outbound error",
+        "cannot access adhoc adhoc outbound",
+        "cannot connect adhoc adhoc outbound",
+        "support adhoc adhoc outbound"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "Liên hệ (Buyer) với các mục đích khác: khảo sát, chúc mừng sinh nhật, thông báo mới, xử lý các vấn đề khác theo kịch bản yêu cầu của Seller.",
+      "sla": "24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Setup - Script & FLOW - Basic",
+      "category": "CSR / Tele& CSR",
+      "keywords": [
+        "setup - script flow - basic",
+        "csr / tele csr",
+        "csr-set-01",
+        "setup script flow issue",
+        "setup script flow error",
+        "cannot access setup script flow",
+        "cannot connect setup script flow",
+        "support setup script flow"
+      ],
+      "pic": "Tele-CSR Operations Team",
+      "sop": "Xây dựng Call Crip, Bộ Q&A xử lý từ chối và Flow chart quy trình CSR",
+      "sla": "Hoàn thành trong 2 ngày làm việc",
+      "priority_rules": "Medium - Default Medium priority. Raise to High if the request impacts live operations, customer commitments, or urgent delivery milestones."
+    },
+    {
+      "service_name": "Setup - Training Agent - Basic",
+      "category": "CSR / Tele& CSR",
+      "keywords": [
+        "setup - training agent - basic",
+        "csr / tele csr",
+        "csr-set-02",
+        "setup training agent issue",
+        "setup training agent error",
+        "cannot access setup training agent",
+        "cannot connect setup training agent",
+        "support setup training agent"
+      ],
+      "pic": "Tele-CSR Operations Team",
+      "sop": "Đào tạo Tổng quan sản phẩm & Các Kỹ năng cần thiết & Quy trình làm việc",
+      "sla": "Hoàn thành bài Test sau đào tạo với kết quả >=80%",
+      "priority_rules": "Medium - Default Medium priority. Raise to High if the request impacts live operations, customer commitments, or urgent delivery milestones."
+    },
+    {
+      "service_name": "Setup - Reporting - Basic",
+      "category": "CSR / Tele& CSR",
+      "keywords": [
+        "setup - reporting - basic",
+        "csr / tele csr",
+        "csr-set-03",
+        "setup reporting basic issue",
+        "setup reporting basic error",
+        "cannot access setup reporting basic",
+        "cannot connect setup reporting basic",
+        "support setup reporting basic"
+      ],
+      "pic": "Tele-CSR Operations Team",
+      "sop": "Hỗ trợ thiết lập các Template báo cáo (Google Sheet/ Power BI/ Looker Studio..) \nDaily Report: calls, connect rate, confirm rate, pending, RTO reason",
+      "sla": "Hoàn tất biểu mẫu  trong 2 ngày làm việc.\nDaily Report gửi trước 10h30 hàng ngày.",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Setup - Oms/ CRM - Premium",
+      "category": "CSR / Tele& CSR",
+      "keywords": [
+        "setup - oms/ crm - premium",
+        "csr / tele csr",
+        "csr-set-04",
+        "setup oms/ crm issue",
+        "setup oms/ crm error",
+        "cannot access setup oms/ crm",
+        "cannot connect setup oms/ crm",
+        "support setup oms/ crm"
+      ],
+      "pic": "Tele-CSR Operations Team",
+      "sop": "Hỗ trợ giải pháp lưu trữ dự liệu và thiết lập Report tự động qua hệ thống OMS/ CRM",
+      "sla": "Hoàn tất trong 7 ngày làm việc",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Setup - CALL Center - Standard",
+      "category": "CSR / Tele& CSR",
+      "keywords": [
+        "setup - call center - standard",
+        "csr / tele csr",
+        "csr-set-05",
+        "setup call center issue",
+        "setup call center error",
+        "cannot access setup call center",
+        "cannot connect setup call center",
+        "support setup call center"
+      ],
+      "pic": "Tele-CSR Operations Team",
+      "sop": "Hỗ trợ giải pháp Call Center (Auto dial)",
+      "sla": "Hoàn tất trong 7 ngày làm việc",
+      "priority_rules": "Medium - Default Medium priority. Raise to High if the request impacts live operations, customer commitments, or urgent delivery milestones."
+    },
+    {
+      "service_name": "Order Processing - Tracking Management - Standard",
+      "category": "CSR / Basic / Tele& CSR",
+      "keywords": [
+        "order processing - tracking management - standard",
+        "order processing - tracking  - standard",
+        "csr / basic / tele csr",
+        "csr-ops 2",
+        "order processing tracking issue",
+        "order processing tracking error",
+        "cannot access order processing tracking",
+        "cannot connect order processing tracking",
+        "support order processing tracking"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "- Theo dõi hành trình đơn hàng trên hệ thống vận chuyển (J&T, Ninja Van...) hàng ngày.\n-Đảm bảo đơn hàng được lấy hàng (Pickup) đúng hạn và cập nhật trạng thái liên tục.\n-Báo cáo định kỳ tình trạng đơn hàng cho Seller.",
+      "sla": "-Kiểm tra hành trình đơn hàng tối thiểu 3 lần/ngày.\n-Đảm bảo tỷ lệ đơn bị \"giam\" kho không quá 24h mà không có thông báo.",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Standard",
+      "category": "Tele& CSR",
+      "keywords": [
+        "standard",
+        "tele csr",
+        "standard issue",
+        "standard error",
+        "cannot access standard",
+        "cannot connect standard",
+        "support standard"
+      ],
+      "pic": "Tele-CSR Operations Team",
+      "sop": "Follow standard operating procedure.",
+      "sla": "24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Order Processing - Delivery Support - Standard",
+      "category": "CSR / Tele& CSR",
+      "keywords": [
+        "order processing - delivery support - standard",
+        "order processing - delivery  - standard",
+        "csr / tele csr",
+        "csr-ops 3",
+        "order processing delivery issue",
+        "order processing delivery error",
+        "cannot access order processing delivery",
+        "cannot connect order processing delivery",
+        "support order processing delivery"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "- Chủ động tiếp nhận, xử lý các đơn hàng gặp sự cố giao hàng (Không liên lạc được khách, sai địa chỉ, khách hẹn lại ngày...).\n-CSR trực tiếp liên hệ Buyer (Call/Inbox) để chỉnh sửa thông tin hoặc thuyết phục nhận hàng.\n-Làm việc với ĐVVC để đẩy nhanh tiến độ giao lại (Redelivery).",
+      "sla": "-Xử lý sự cố trong vòng 24h làm việc kể từ khi phát sinh sự cố\n-Note chi tiết lịch sử xử lý cho từng trường hợp",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "After-sales - Exchange Handling - Standard",
+      "category": "CSR / Tele& CSR",
+      "keywords": [
+        "after-sales - exchange handling - standard",
+        "csr / tele csr",
+        "csr-ass",
+        "after-sales exchange handling issue",
+        "after-sales exchange handling error",
+        "cannot access after-sales exchange handling",
+        "cannot connect after-sales exchange handling",
+        "support after-sales exchange handling"
+      ],
+      "pic": "Tele-CSR Operations Team",
+      "sop": "Quản lý quy trình đổi trả hàng/ hoàn tiền cho Buyer (phát sinh sau khi khách đã nhận hàng)",
+      "sla": "24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "After-sales - Complaint Management - Premium",
+      "category": "CSR / Tele& CSR",
+      "keywords": [
+        "after-sales - complaint management - premium",
+        "after-sales - complaint  - premium",
+        "csr / tele csr",
+        "csr-ass",
+        "after-sales complaint premium issue",
+        "after-sales complaint premium error",
+        "cannot access after-sales complaint premium",
+        "cannot connect after-sales complaint premium",
+        "support after-sales complaint premium"
+      ],
+      "pic": "Tele-CSR Operations Team",
+      "sop": "Tiếp nhận và xử lý khiếu nại qua các kênh Online",
+      "sla": "24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "After-sales - Resale - Premium",
+      "category": "CSR / Tele& CSR",
+      "keywords": [
+        "after-sales - resale - premium",
+        "csr / tele csr",
+        "csr-ass",
+        "after-sales resale premium issue",
+        "after-sales resale premium error",
+        "cannot access after-sales resale premium",
+        "cannot connect after-sales resale premium",
+        "support after-sales resale premium"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "Tiếp nhận danh sách Buyer, tiến hành Quy trình chăm sóc sau bán (cá nhân hóa theo từng nhóm SP):\n-Re-order: Gọi điện chăm sóc khi khách sắp dùng hết SP (nhóm TPCN, mỹ phẩm) để mời mua tiếp liệu trình mới.\n-Upsell/ Cross sell \n- Return: Liên hệ với những khách hàng đã lâu không mua hàng và mời quay lại.",
+      "sla": "24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Adhoc Support - Basic Seeding - Basic",
+      "category": "CSR / Tele& CSR",
+      "keywords": [
+        "adhoc support - basic seeding - basic",
+        "adhoc  - basic seeding - basic",
+        "csr / tele csr",
+        "ts-sup 1",
+        "adhoc basic seeding issue",
+        "adhoc basic seeding error",
+        "cannot access adhoc basic seeding",
+        "cannot connect adhoc basic seeding",
+        "support adhoc basic seeding"
+      ],
+      "pic": "Business Development Team",
+      "sop": "Chỉ like, thả tim hoặc cmt icon/ câu ngắn",
+      "sla": "24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Adhoc Support - Premium Seeding - Premium",
+      "category": "CSR / Tele& CSR",
+      "keywords": [
+        "adhoc support - premium seeding - premium",
+        "adhoc  - premium seeding - premium",
+        "csr / tele csr",
+        "ts-sup 2",
+        "adhoc premium seeding issue",
+        "adhoc premium seeding error",
+        "cannot access adhoc premium seeding",
+        "cannot connect adhoc premium seeding",
+        "support adhoc premium seeding"
+      ],
+      "pic": "Business Development Team",
+      "sop": "Cmt dài/ có hình ảnh minh họa, điều hướng khách về Inbox",
+      "sla": "24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Adhoc Support - General Customer Outreach - Standard",
+      "category": "CSR / Tele& CSR",
+      "keywords": [
+        "adhoc support - general customer outreach - standard",
+        "adhoc  - general customer outreach - standard",
+        "csr / tele csr",
+        "ts-sup 3",
+        "adhoc general customer issue",
+        "adhoc general customer error",
+        "cannot access adhoc general customer",
+        "cannot connect adhoc general customer",
+        "support adhoc general customer"
+      ],
+      "pic": "Tele-CSR Operations Team",
+      "sop": "Liên hệ (Buyer) với các mục đích khác: khảo sát, chúc mừng sinh nhật, thông báo mới, xử lý các vấn đề khác ngoài luồng công việc của GIP.",
+      "sla": "24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Setup - Operation Guideline Setup - Basic",
+      "category": "CSR",
+      "keywords": [
+        "setup - operation guideline setup - basic",
+        "csr",
+        "csr-set-001-000-000",
+        "setup operation guideline issue",
+        "setup operation guideline error",
+        "cannot access setup operation guideline",
+        "cannot connect setup operation guideline",
+        "support setup operation guideline"
+      ],
+      "pic": "Customer Service Team",
+      "sop": "Xây dựng tài liệu hướng dẫn vận hành CSR bao gồm quy trình theo dõi đơn hàng, quản lý trạng thái và xử lý sự cố",
+      "sla": "Hoàn thành trong 2 ngày",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Setup - CSR Training - Basic",
+      "category": "CSR",
+      "keywords": [
+        "setup - csr training - basic",
+        "csr",
+        "csr-set-001-000-001",
+        "setup csr training issue",
+        "setup csr training error",
+        "cannot access setup csr training",
+        "cannot connect setup csr training",
+        "support setup csr training"
+      ],
+      "pic": "Customer Service Team",
+      "sop": "Đào tạo nhân sự CSR về quy trình xử lý đơn hàng, failed delivery và quy trình escalte",
+      "sla": "1 buổi đào tạo",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Setup - Carrier Process Training - Basic",
+      "category": "CSR",
+      "keywords": [
+        "setup - carrier process training - basic",
+        "csr",
+        "csr-set-001-000-002",
+        "setup carrier process issue",
+        "setup carrier process error",
+        "cannot access setup carrier process",
+        "cannot connect setup carrier process",
+        "support setup carrier process"
+      ],
+      "pic": "Customer Service Team",
+      "sop": "Đào tạo cách đọc trạng thái vận chuyển và quy trình làm việc với các đơn vị vận chuyển",
+      "sla": "Hoàn thành trong 2 ngày",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Setup - Reporting Template Setup - Basic",
+      "category": "CSR",
+      "keywords": [
+        "setup - reporting template setup - basic",
+        "csr",
+        "csr-set-001-000-003",
+        "setup reporting template issue",
+        "setup reporting template error",
+        "cannot access setup reporting template",
+        "cannot connect setup reporting template",
+        "support setup reporting template"
+      ],
+      "pic": "Customer Service Team",
+      "sop": "Thiết lập template báo cáo vận hành đơn hàng và tỷ lệ giao hàng",
+      "sla": "Hoàn thành trong 1 ngày",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Order Processing - Order Status Monitoring - Standard",
+      "category": "CSR",
+      "keywords": [
+        "order processing - order status monitoring - standard",
+        "csr",
+        "csr-ops-002-001-000",
+        "order processing order issue",
+        "order processing order error",
+        "cannot access order processing order",
+        "cannot connect order processing order",
+        "support order processing order"
+      ],
+      "pic": "Customer Service Team",
+      "sop": "Theo dõi trạng thái đơn hàng và cập nhật tiến trình vận chuyển trên hệ thống.",
+      "sla": "Cập nhật tối đa 3 lần/ngày",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Order Processing - Pending Order Monitoring - Standard",
+      "category": "CSR",
+      "keywords": [
+        "order processing - pending order monitoring - standard",
+        "csr",
+        "csr-ops-002-001-001",
+        "order processing pending issue",
+        "order processing pending error",
+        "cannot access order processing pending",
+        "cannot connect order processing pending",
+        "support order processing pending"
+      ],
+      "pic": "Customer Service Team",
+      "sop": "Theo dõi các đơn hàng chưa được pickup hoặc chưa được xử lý",
+      "sla": "Kiểm tra hàng ngày",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Order Processing - Order DATA Handover - Standard",
+      "category": "CSR",
+      "keywords": [
+        "order processing - order data handover - standard",
+        "csr",
+        "csr-ops-002-001-002",
+        "order processing order issue",
+        "order processing order error",
+        "cannot access order processing order",
+        "cannot connect order processing order",
+        "support order processing order"
+      ],
+      "pic": "Customer Service Team",
+      "sop": "Text toàn bộ data mới bàn giao cho đơn vị vận chuyển (text thông báo 1 lần)",
+      "sla": "Đảm bảo xử lý trong vòng ≤ 24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Order Processing - Failed Delivery Monitoring - Standard",
+      "category": "CSR",
+      "keywords": [
+        "order processing - failed delivery monitoring - standard",
+        "csr",
+        "csr-ops-002-001-003",
+        "order processing failed issue",
+        "order processing failed error",
+        "cannot access order processing failed",
+        "cannot connect order processing failed",
+        "support order processing failed"
+      ],
+      "pic": "Customer Service Team",
+      "sop": "Theo dõi các đơn giao thất bại và cập nhật trạng thái",
+      "sla": "Kiểm tra hàng ngày",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Order Processing - Customer Contact - Standard",
+      "category": "CSR",
+      "keywords": [
+        "order processing - customer contact - standard",
+        "csr",
+        "csr-ops-002-001-004",
+        "order processing customer issue",
+        "order processing customer error",
+        "cannot access order processing customer",
+        "cannot connect order processing customer",
+        "support order processing customer"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "Liên hệ khách hàng để xác nhận hoặc xử lý các vấn đề phát sinh như sai địa chỉ, không liên lạc được, hoặc yêu cầu đổi lịch giao hàng",
+      "sla": "Thực hiện trong vòng 24 giờ",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Order Processing - Issue CALL – 1 Attempt - Standard",
+      "category": "CSR",
+      "keywords": [
+        "order processing - issue call 1 attempt - standard",
+        "csr",
+        "csr-ops-002-001-005",
+        "order processing issue issue",
+        "order processing issue error",
+        "cannot access order processing issue",
+        "cannot connect order processing issue",
+        "support order processing issue"
+      ],
+      "pic": "Customer Service Team",
+      "sop": "Thực hiện gọi xử lý các đơn hàng gặp vấn đề tối thiểu 1 lần/ngày.",
+      "sla": "Đảm bảo xử lý trong vòng ≤ 24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Order Processing - Issue CALL – 2 Attempts - Standard",
+      "category": "CSR",
+      "keywords": [
+        "order processing - issue call 2 attempts - standard",
+        "csr",
+        "csr-ops-002-001-006",
+        "order processing issue issue",
+        "order processing issue error",
+        "cannot access order processing issue",
+        "cannot connect order processing issue",
+        "support order processing issue"
+      ],
+      "pic": "Customer Service Team",
+      "sop": "Thực hiện gọi xử lý các đơn hàng gặp vấn đề tối đa 2 lần liên hệ khách hàng nhằm tăng khả năng giao hàng thành công",
+      "sla": "Đảm bảo xử lý trong vòng ≤ 24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Order Processing - Issue CALL – 3 Attempts - Advanced",
+      "category": "CSR",
+      "keywords": [
+        "order processing - issue call 3 attempts - advanced",
+        "csr",
+        "csr-ops-002-001-007",
+        "order processing issue issue",
+        "order processing issue error",
+        "cannot access order processing issue",
+        "cannot connect order processing issue",
+        "support order processing issue"
+      ],
+      "pic": "Customer Service Team",
+      "sop": "Thực hiện gọi xử lý các đơn hàng gặp vấn đề tối đa 3 lần liên hệ khách hàng nhằm tăng khả năng giao hàng thành công",
+      "sla": "Đảm bảo xử lý trong vòng ≤ 24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Order Processing - Delivery Reschedule Support - Standard",
+      "category": "CSR",
+      "keywords": [
+        "order processing - delivery reschedule support - standard",
+        "order processing - delivery reschedule  - standard",
+        "csr",
+        "csr-ops-002-001-008",
+        "order processing delivery issue",
+        "order processing delivery error",
+        "cannot access order processing delivery",
+        "cannot connect order processing delivery",
+        "support order processing delivery"
+      ],
+      "pic": "Customer Service Team",
+      "sop": "Hỗ trợ khách hàng thay đổi thời gian giao hàng",
+      "sla": "Đảm bảo xử lý trong vòng ≤ 24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Order Processing - Return Order Monitoring - Standard",
+      "category": "CSR",
+      "keywords": [
+        "order processing - return order monitoring - standard",
+        "csr",
+        "csr-ops-002-001-009",
+        "order processing return issue",
+        "order processing return error",
+        "cannot access order processing return",
+        "cannot connect order processing return",
+        "support order processing return"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "Theo dõi tiến trình hoàn hàng về kho",
+      "sla": "Kiểm tra hàng ngày",
+      "priority_rules": "Medium - Default Medium priority. Raise to High if the request impacts live operations, customer commitments, or urgent delivery milestones."
+    },
+    {
+      "service_name": "Delivery Shipping - Carrier Escalation - Advanced",
+      "category": "CSR",
+      "keywords": [
+        "delivery shipping - carrier escalation - advanced",
+        "csr",
+        "csr-ds-003-001-000",
+        "delivery shipping carrier issue",
+        "delivery shipping carrier error",
+        "cannot access delivery shipping carrier",
+        "cannot connect delivery shipping carrier",
+        "support delivery shipping carrier"
+      ],
+      "pic": "Customer Service Team",
+      "sop": "Escalate tới đơn vị vận chuyển đối với các đơn chậm hoặc lỗi vận chuyển",
+      "sla": "Trong 24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Delivery Shipping - SLA Monitoring - Advanced",
+      "category": "CSR",
+      "keywords": [
+        "delivery shipping - sla monitoring - advanced",
+        "csr",
+        "csr-ds-003-001-001",
+        "delivery shipping sla issue",
+        "delivery shipping sla error",
+        "cannot access delivery shipping sla",
+        "cannot connect delivery shipping sla",
+        "support delivery shipping sla"
+      ],
+      "pic": "Customer Service Team",
+      "sop": "Theo dõi các đơn vượt SLA giao hàng",
+      "sla": "Kiểm tra hàng ngày",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Delivery Shipping - Delivery Investigation - Advanced",
+      "category": "CSR",
+      "keywords": [
+        "delivery shipping - delivery investigation - advanced",
+        "csr",
+        "csr-ds-003-001-002",
+        "delivery shipping delivery issue",
+        "delivery shipping delivery error",
+        "cannot access delivery shipping delivery",
+        "cannot connect delivery shipping delivery",
+        "support delivery shipping delivery"
+      ],
+      "pic": "Customer Service Team",
+      "sop": "Điều tra nguyên nhân giao hàng thất bại",
+      "sla": "Trong 48h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Claim - LOST Shipment Claim - Advanced",
+      "category": "CSR",
+      "keywords": [
+        "claim - lost shipment claim - advanced",
+        "csr",
+        "csr-cl-004-001-000",
+        "claim lost shipment issue",
+        "claim lost shipment error",
+        "cannot access claim lost shipment",
+        "cannot connect claim lost shipment",
+        "support claim lost shipment"
+      ],
+      "pic": "Customer Service Team",
+      "sop": "Lập hồ sơ claim đối với đơn hàng bị mất",
+      "sla": "Trong 48h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Claim - Damage Claim - Advanced",
+      "category": "CSR",
+      "keywords": [
+        "claim - damage claim - advanced",
+        "csr",
+        "csr-cl-004-001-001",
+        "claim damage claim issue",
+        "claim damage claim error",
+        "cannot access claim damage claim",
+        "cannot connect claim damage claim",
+        "support claim damage claim"
+      ],
+      "pic": "Customer Service Team",
+      "sop": "Lập hồ sơ claim đối với đơn hàng bị hư hỏng",
+      "sla": "Trong 48h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Claim - Return Claim - Advanced",
+      "category": "CSR",
+      "keywords": [
+        "claim - return claim - advanced",
+        "csr",
+        "csr-cl-004-001-002",
+        "claim return claim issue",
+        "claim return claim error",
+        "cannot access claim return claim",
+        "cannot connect claim return claim",
+        "support claim return claim"
+      ],
+      "pic": "Warehouse Operations Team",
+      "sop": "Claim đối với hàng hoàn bị mất hoặc hư hỏng",
+      "sla": "Trong 48h",
+      "priority_rules": "Medium - Default Medium priority. Raise to High if the request impacts live operations, customer commitments, or urgent delivery milestones."
+    },
+    {
+      "service_name": "Claim - Claim Status Monitoring - Advanced",
+      "category": "CSR",
+      "keywords": [
+        "claim - claim status monitoring - advanced",
+        "csr",
+        "csr-cl-004-001-003",
+        "claim claim status issue",
+        "claim claim status error",
+        "cannot access claim claim status",
+        "cannot connect claim claim status",
+        "support claim claim status"
+      ],
+      "pic": "Customer Service Team",
+      "sop": "Theo dõi tiến trình xử lý claim với carrier",
+      "sla": "Cập nhật hàng tuần",
+      "priority_rules": "Medium - Default Medium priority. Raise to High if the request impacts live operations, customer commitments, or urgent delivery milestones."
+    },
+    {
+      "service_name": "Report - Delivery Performance Report - Standard",
+      "category": "CSR",
+      "keywords": [
+        "report - delivery performance report - standard",
+        "csr",
+        "csr-rep-005-001-000",
+        "report delivery performance issue",
+        "report delivery performance error",
+        "cannot access report delivery performance",
+        "cannot connect report delivery performance",
+        "support report delivery performance"
+      ],
+      "pic": "Customer Service Team",
+      "sop": "Tổng hợp và báo cáo tỷ lệ giao hàng thành công theo ngày, tuần và tháng",
+      "sla": "Cập nhật báo cáo định kỳ theo ngày, tuần và tháng",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Report - Performance Analysis Report - Advanced",
+      "category": "CSR",
+      "keywords": [
+        "report - performance analysis report - advanced",
+        "csr",
+        "csr-rep-005-001-001",
+        "report performance analysis issue",
+        "report performance analysis error",
+        "cannot access report performance analysis",
+        "cannot connect report performance analysis",
+        "support report performance analysis"
+      ],
+      "pic": "Customer Service Team",
+      "sop": "Phân tích hiệu suất giao hàng theo 5 yếu tố:\n- Hoàn theo địa lý\n- Hoàn theo sản phẩm\n- Hoàn theo đơn vị vận chuyển\n- Hoàn theo loại hình dịch vụ\n- Hoàn theo ngày tạo đơn  \n=> Đề xuất phương án cải thiện",
+      "sla": "Gửi báo cáo phân tích định kỳ",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Report - ROOT Cause Analysis - Advanced",
+      "category": "CSR",
+      "keywords": [
+        "report - root cause analysis - advanced",
+        "csr",
+        "csr-rep-005-001-002",
+        "report root cause issue",
+        "report root cause error",
+        "cannot access report root cause",
+        "cannot connect report root cause",
+        "support report root cause"
+      ],
+      "pic": "Customer Service Team",
+      "sop": "Phân tích nguyên nhân chính gây hoàn hàng",
+      "sla": "Hàng tháng",
+      "priority_rules": "Medium - Default Medium priority. Raise to High if the request impacts live operations, customer commitments, or urgent delivery milestones."
+    },
+    {
+      "service_name": "Support - Seller Inquiry Handling - Standard",
+      "category": "CSR",
+      "keywords": [
+        "support - seller inquiry handling - standard",
+        "- seller inquiry handling - standard",
+        "csr",
+        "csr-ss-006-001-000",
+        "seller inquiry handling issue",
+        "seller inquiry handling error",
+        "cannot access seller inquiry handling",
+        "cannot connect seller inquiry handling",
+        "support seller inquiry handling"
+      ],
+      "pic": "Customer Service Team",
+      "sop": "Tiếp nhận và xử lý các yêu cầu từ seller liên quan tới đơn hàng",
+      "sla": "Trong 24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Support - Negative Review Handling - Advanced",
+      "category": "CSR",
+      "keywords": [
+        "support - negative review handling - advanced",
+        "- negative review handling - advanced",
+        "csr",
+        "csr-ss-006-001-001",
+        "negative review handling issue",
+        "negative review handling error",
+        "cannot access negative review handling",
+        "cannot connect negative review handling",
+        "support negative review handling"
+      ],
+      "pic": "Customer Service Team",
+      "sop": "Xử lý phản hồi tiêu cực từ khách hàng trên các nền tảng bán hàng",
+      "sla": "Trong 24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    },
+    {
+      "service_name": "Support - Seeding Order Support - Standard",
+      "category": "CSR",
+      "keywords": [
+        "support - seeding order support - standard",
+        "- seeding order  - standard",
+        "csr",
+        "csr-ss-006-001-002",
+        "seeding order standard issue",
+        "seeding order standard error",
+        "cannot access seeding order standard",
+        "cannot connect seeding order standard",
+        "support seeding order standard"
+      ],
+      "pic": "Business Development Team",
+      "sop": "Hỗ trợ seller thực hiện seeding đơn hàng",
+      "sla": "Trong 24h",
+      "priority_rules": "High - Default High priority. Raise to Critical if the issue blocks same-day operations, payment flow, OTP access, or a large volume of active customer orders."
+    }
+  ],
+  "meta": {
+    "importedAt": "2026-04-21T08:00:08.960Z",
+    "sourceType": "excel",
+    "sheetName": "KHO, KD, KT, Telesale, Tele& CSR, CSR, SOP Dịch vụ, Validation",
+    "sheetNames": [
+      "KHO",
+      "KD",
+      "KT",
+      "Telesale",
+      "Tele& CSR",
+      "CSR",
+      "SOP Dịch vụ",
+      "Validation"
+    ],
+    "rowCount": 159,
+    "columnMap": {
+      "service_name": "Service Name 3",
+      "service_name_columns": [
+        "Service Name 1",
+        "Service Name 2",
+        "Service Name 3"
+      ],
+      "service_code": "Code",
+      "category": "Service Type",
+      "category_columns": [
+        "Service Type",
+        "Type",
+        "__sheetName"
+      ],
+      "keywords": null,
+      "pic": null,
+      "sop": "Detail",
+      "sla": "Commit",
+      "priority_rules": null
+    }
+  }
+}

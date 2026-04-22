@@ -1,0 +1,485 @@
+[
+  {
+    "id": "TC-VD-01",
+    "nhom": "Vận đơn",
+    "market": "Philippines",
+    "gip": "GIP 180",
+    "msg": "Chị ơi, em lên đơn từ sáng rồi mà giờ này 3h chiều vẫn chưa thấy đơn đi ạ. Sao vậy chị?",
+    "cap": 1,
+    "picDVKH": "Ngô Thị Phương Linh",
+    "picPhongBan": "Nguyễn Ngọc Nam (Vận đơn - PH)",
+    "notif": [
+      "Vận đơn"
+    ],
+    "sla": "2 giờ",
+    "output": "[Cấp 1 — Chốt đơn] Kiểm tra file xuất kho GGsheet ngày T. Xác nhận với Vận đơn xem đơn đã qua cutoff (14:00 VNT PH) chưa. Nếu qua cutoff → đơn đẩy sang ngày T+1. Assign: Nguyễn Ngọc Nam (Vận đơn). Thông báo: Group Vận đơn PH.",
+    "sop": "QT Vận đơn — Cutoff PH 14:00 VNT"
+  },
+  {
+    "id": "TC-VD-02",
+    "nhom": "Vận đơn",
+    "market": "Philippines",
+    "gip": "GIP 265",
+    "msg": "Đơn BSO427074 của em đã giao từ 3 ngày trước mà vẫn chưa thấy cập nhật trạng thái. Buyer đang phàn nàn. Nhờ GIP pushing ĐVVC giúp em.",
+    "cap": 2,
+    "picDVKH": "Nguyễn Khánh Linh",
+    "picPhongBan": "Nguyễn Ngọc Nam (Vận đơn - PH) + Trần Thị Thanh Huyền (CSR - PH)",
+    "notif": [
+      "Vận đơn",
+      "CSR"
+    ],
+    "sla": "4 giờ (T+0)",
+    "output": "[Cấp 2 — Delay ĐVVC] Tiếp nhận danh sách mã đơn. Báo Vận đơn push JnT/Ninja xử lý. CSR theo dõi tình trạng buyer. Assign PIC: Nguyễn Ngọc Nam. Thông báo: Group Vận đơn PH + CSR PH.",
+    "sop": "QT Vận đơn — Bước 3 Dây đơn vị vận chuyển"
+  },
+  {
+    "id": "TC-VD-03",
+    "nhom": "Vận đơn",
+    "market": "Indonesia",
+    "gip": "GIPIN 08",
+    "msg": "Em muốn hủy đơn XYZ789 ngay bây giờ, khách vừa cancel đơn.",
+    "cap": 1,
+    "picDVKH": "Lê Quyết Chiến",
+    "picPhongBan": "Nguyễn Đăng Dương (Vận đơn - ID)",
+    "notif": [
+      "Vận đơn",
+      "Kho"
+    ],
+    "sla": "1 giờ",
+    "output": "[Cấp 1 — Hủy đơn] Kiểm tra đơn đã đóng gói chưa. Nếu chưa: báo Vận đơn cancel. Nếu đã đóng: báo Kho chuyển sang hàng hoàn. Assign: Nguyễn Đăng Dương. Thông báo: Vận đơn + Kho ID.",
+    "sop": "QT Vận đơn — Bước 3 hủy đơn"
+  },
+  {
+    "id": "TC-VD-04",
+    "nhom": "Vận đơn",
+    "market": "Malaysia",
+    "gip": "GIPML 29",
+    "msg": "Em nhận phản hồi từ khách hàng là nhận thiếu 2 cái sp trong đơn BSO999. Nhờ GIP kiểm tra hộ.",
+    "cap": 2,
+    "picDVKH": "Vũ Nguyễn Phương An",
+    "picPhongBan": "Cao Kỳ (Vận đơn - MY) + Lê Phương Dung (Kho - MY)",
+    "notif": [
+      "Vận đơn",
+      "Kho",
+      "CSR"
+    ],
+    "sla": "4 giờ (T+0)",
+    "output": "[Cấp 2 — Giao thiếu sản phẩm] Yêu cầu KH cung cấp waybill + video mở hàng. Gửi cho Kho kiểm tra lại số lượng đóng gói. Nếu lỗi Kho → xử lý bồi thường nội bộ. Nếu lỗi ĐVVC → claim CSR. Thông báo: Kho MY + CSR MY.",
+    "sop": "QT Kho — Đóng gói đơn hàng"
+  },
+  {
+    "id": "TC-VD-05",
+    "nhom": "Vận đơn",
+    "market": "Philippines",
+    "gip": "GIP 142",
+    "msg": "Đơn BSO427049 của em bị hoàn về tình trạng hàng hỏng, em muốn claim bồi thường với JnT.",
+    "cap": 2,
+    "picDVKH": "Vũ Nguyễn Phương An",
+    "picPhongBan": "Nguyễn Ngọc Nam (Vận đơn - PH) + Trần Thị Thanh Huyền (CSR - PH)",
+    "notif": [
+      "Vận đơn",
+      "CSR",
+      "Kho"
+    ],
+    "sla": "24 giờ (T+1)",
+    "output": "[Cấp 2 — Claim ĐVVC] Tiếp nhận ảnh/video hàng hỏng. Gửi Kho cung cấp ảnh đóng gói. CSR làm việc với JnT claim. Lưu ý GIP 142 có auto-claim. Thông báo: CSR PH + Kho PH + Vận đơn PH.",
+    "sop": "QUY TRÌNH CLAIM — DVKH x SUPPORT"
+  },
+  {
+    "id": "TC-VD-06",
+    "nhom": "Vận đơn",
+    "market": "Philippines",
+    "gip": "GIP 179",
+    "msg": "Tháng này tỷ lệ hoàn của em lên đến 45%, cao quá. GIP có thể giúp em check lý do hoàn không?",
+    "cap": 2,
+    "picDVKH": "Vũ Nguyễn Phương An",
+    "picPhongBan": "Nguyễn Ngọc Nam (Vận đơn - PH) + Đặng Nhật Linh (Kinh doanh)",
+    "notif": [
+      "Vận đơn",
+      "CSR",
+      "Kinh doanh"
+    ],
+    "sla": "24 giờ (T+1)",
+    "output": "[Cấp 2 — Tỷ lệ hoàn cao] Lấy dữ liệu hoàn 30 ngày. Phân tích lý do hoàn (ĐVVC/sp/địa chỉ). Báo Kinh doanh xem xét giải pháp. CSR gọi kiểm tra buyer. Thông báo: Vận đơn + CSR PH + Kinh doanh.",
+    "sop": "TK038/039 — Tối ưu tỷ lệ giao hàng"
+  },
+  {
+    "id": "TC-VD-07",
+    "nhom": "Vận đơn",
+    "market": "Philippines",
+    "gip": "GIP 188",
+    "msg": "File thanh toán tháng này của em có GTBH set 500p nhưng file trả về nhỏ hơn rất nhiều. Em muốn họp gấp để giải quyết.",
+    "cap": 3,
+    "picDVKH": "Nguyễn Khánh Linh",
+    "picPhongBan": "Nguyễn Ngọc Nam (Vận đơn) + Phạm Phương Trà (KT) + Nguyễn Thảo Ly (DVKH Lead)",
+    "notif": [
+      "Vận đơn",
+      "Kế toán",
+      "DVKH Lead",
+      "Ban Lãnh Đạo"
+    ],
+    "sla": "2 giờ — Họp gấp",
+    "output": "[Cấp 3 — Tranh chấp tài chính] Xác nhận KH muốn họp gấp. Notify BLĐ ngay. Vận đơn + KT cùng kiểm tra chênh lệch GTBH với JnT. Prepare data trước cuộc họp. Thông báo: Vận đơn + KT + BLĐ.",
+    "sop": "TK-VD — GTBH sai / Claim JnT"
+  },
+  {
+    "id": "TC-KHO-01",
+    "nhom": "Kho",
+    "market": "Philippines",
+    "gip": "GIP 209",
+    "msg": "Bên em có lô hàng về kho hôm qua nhưng đến nay vẫn chưa thấy tồn kho cập nhật trên hệ thống.",
+    "cap": 1,
+    "picDVKH": "Lê Quyết Chiến",
+    "picPhongBan": "Vương Quốc Đạt (Kho - PH)",
+    "notif": [
+      "Kho",
+      "Vận đơn"
+    ],
+    "sla": "2 giờ",
+    "output": "[Cấp 1 — Nhập kho chậm] Kiểm tra bảng Kế hoạch nhập hàng KH đã điền chưa. Nếu chưa: yêu cầu KH điền. Nếu rồi: báo Kho PH kiểm tra lô hàng. Assign: Vương Quốc Đạt. Thông báo: Kho PH.",
+    "sop": "QT Nhập hàng (không SSC) — Bước 1-2"
+  },
+  {
+    "id": "TC-KHO-02",
+    "nhom": "Kho",
+    "market": "Indonesia",
+    "gip": "GIPIN 16",
+    "msg": "Em muốn yêu cầu GIP kiểm kê hàng tồn kho cho GIPIN 16. Số liệu trên hệ thống và thực tế đang chênh lệch.",
+    "cap": 2,
+    "picDVKH": "Nguyễn Khánh Linh",
+    "picPhongBan": "Lê Phương Dung (Kho - ID) + Trương Hương Giang (KT - ID)",
+    "notif": [
+      "Kho",
+      "Kế toán"
+    ],
+    "sla": "24 giờ (T+1)",
+    "output": "[Cấp 2 — Kiểm kê theo yêu cầu] Tạo lệnh kiểm kê qua 1Office. KT Kho tạo biên bản kiểm kê. Kho kiểm thực tế (max 3 lần). Kết quả gửi KH. SLA: T+3. Thông báo: Kho ID + KT ID.",
+    "sop": "QT Kho — Quy trình kiểm kê (Bước 1-6)"
+  },
+  {
+    "id": "TC-KHO-03",
+    "nhom": "Kho",
+    "market": "Malaysia",
+    "gip": "GIPML 58",
+    "msg": "Lô hàng em nhập vào hôm nay có 3 thùng bị móp méo và 1 thùng bị rách. Kho GIP có hình ảnh không?",
+    "cap": 2,
+    "picDVKH": "Nguyễn Khánh Linh",
+    "picPhongBan": "Lê Phương Dung (Kho - MY)",
+    "notif": [
+      "Kho",
+      "Vận đơn"
+    ],
+    "sla": "4 giờ (T+0)",
+    "output": "[Cấp 2 — Hàng hỏng khi nhập] Yêu cầu Kho cung cấp ảnh + video thùng hàng hỏng. Tạo biên bản kiểm đếm. Báo KH xác nhận số lượng. Nếu lỗi ĐVVC: khởi động claim. Thông báo: Kho MY + Vận đơn MY.",
+    "sop": "QT Nhập hàng — Bước 3 kiểm đếm + hàng móp méo"
+  },
+  {
+    "id": "TC-KHO-04",
+    "nhom": "Kho",
+    "market": "Thailand",
+    "gip": "GIPTL 08",
+    "msg": "Bên em muốn hủy 200 sp đã hết hạn trong kho. Nhờ GIP báo phí và quy trình hủy hàng.",
+    "cap": 2,
+    "picDVKH": "Phan Minh Tâm",
+    "picPhongBan": "Lê Phương Dung (Kho - TL) + Lương Hải Yến (KT - TL)",
+    "notif": [
+      "Kho",
+      "Kế toán",
+      "Vận đơn"
+    ],
+    "sla": "24 giờ (T+1)",
+    "output": "[Cấp 2 — Hủy hàng] Báo Kho xác nhận danh sách + phí. Kế toán công nợ đối trừ quỹ. Vận đơn lên đơn hủy. Kho xuất hàng sang khu vực rác → xe rác T+1. Thông báo: Kho TL + KT TL + Vận đơn TL.",
+    "sop": "QT Kho — Quy trình hủy hàng (9 bước)"
+  },
+  {
+    "id": "TC-KHO-05",
+    "nhom": "Kho",
+    "market": "Philippines",
+    "gip": "GIP 163",
+    "msg": "Khách hàng của em báo nhận được hàng đóng sai — gói sản phẩm A nhưng bên trong lại là sản phẩm B. Xin GIP kiểm tra.",
+    "cap": 2,
+    "picDVKH": "Phan Minh Tâm",
+    "picPhongBan": "Vương Quốc Đạt (Kho - PH) + Nguyễn Ngọc Nam (Vận đơn - PH)",
+    "notif": [
+      "Kho",
+      "Vận đơn",
+      "CSR"
+    ],
+    "sla": "4 giờ (T+0)",
+    "output": "[Cấp 2 — Đóng gói sai] Yêu cầu KH + buyer cung cấp video mở hàng. Kho PH xem lại camera đóng gói. Nếu xác nhận lỗi: đóng đơn mới giao thay. CSR hỗ trợ buyer. Thông báo: Kho PH + Vận đơn PH + CSR PH.",
+    "sop": "TK Kịch bản — Đóng gói sai (GIP 142 case)"
+  },
+  {
+    "id": "TC-KHO-06",
+    "nhom": "Kho",
+    "market": "Philippines",
+    "gip": "GIP 256",
+    "msg": "Kho GIP có thể cho em xin xuất 50 sp về lấy tự vận chuyển bằng Lalamove không ạ?",
+    "cap": 1,
+    "picDVKH": "Lê Quyết Chiến",
+    "picPhongBan": "Vương Quốc Đạt (Kho - PH) + Nguyễn Ngọc Nam (Vận đơn - PH)",
+    "notif": [
+      "Kho",
+      "Vận đơn"
+    ],
+    "sla": "2 giờ",
+    "output": "[Cấp 1 — Xuất tự vận chuyển] DVKH xác nhận yêu cầu + tạo phiếu đề xuất trên 1Office. Kho báo chi phí. KH xác nhận → Vận đơn lên đơn → Kho chuẩn bị. Thông báo: Kho PH + Vận đơn PH.",
+    "sop": "QT Kho — Quy trình xuất/nhập hàng tự vận chuyển"
+  },
+  {
+    "id": "TC-KT-01",
+    "nhom": "Kế toán",
+    "market": "Philippines",
+    "gip": "GIP 30",
+    "msg": "Chị ơi, file đối soát tháng này của em có cột Adjustment mà em không hiểu lý do điều chỉnh. Nhờ chị giải thích.",
+    "cap": 1,
+    "picDVKH": "Nguyễn Khánh Linh",
+    "picPhongBan": "Phạm Phương Trà (KT - PH)",
+    "notif": [
+      "Kế toán"
+    ],
+    "sla": "2 giờ",
+    "output": "[Cấp 1 — Thắc mắc đối soát] Chuyển ticket sang KT PH giải thích sheet Adjustment. Đây là khoản điều chỉnh từ ĐVVC tháng trước. Assign: Phạm Phương Trà. Thông báo: Group KT PH.",
+    "sop": "TK007 — Sheet Adjustment trong file đối soát"
+  },
+  {
+    "id": "TC-KT-02",
+    "nhom": "Kế toán",
+    "market": "Philippines",
+    "gip": "GIP 43",
+    "msg": "Em cần chốt quỹ sớm hơn lịch thứ 6 vì em đang cần tiền gấp. Cho em chuyển sớm được không?",
+    "cap": 1,
+    "picDVKH": "Nguyễn Khánh Linh",
+    "picPhongBan": "Phạm Phương Trà (KT - PH)",
+    "notif": [
+      "Kế toán"
+    ],
+    "sla": "2 giờ",
+    "output": "[Cấp 1 — Đổi lịch nhận tiền] Báo KT PH xem xét điều chỉnh lịch chốt quỹ. Lưu ý: KH cần confirm trước 48 giờ. Assign: Phạm Phương Trà. Thông báo: Group KT PH.",
+    "sop": "TK013 — Đổi ngày nhận tiền mặt"
+  },
+  {
+    "id": "TC-KT-03",
+    "nhom": "Kế toán",
+    "market": "Malaysia",
+    "gip": "GIPML 05",
+    "msg": "Bên em thấy quỹ tuần này bị trừ 5 triệu VND mà không có khoản nào tương ứng. Nhờ GIP kiểm tra lại.",
+    "cap": 2,
+    "picDVKH": "Nguyễn Khánh Linh",
+    "picPhongBan": "Trương Hương Giang (KT - MY) + Nguyễn Thảo Ly (DVKH Lead)",
+    "notif": [
+      "Kế toán",
+      "DVKH Lead"
+    ],
+    "sla": "4 giờ (T+0)",
+    "output": "[Cấp 2 — Sai lệch FUND] DVKH xác nhận thông tin KH. KT MY rà soát sổ sách fund. Nếu xác nhận sai: hoàn tiền + giải trình. Assign: Trương Hương Giang. Thông báo: KT MY + DVKH Lead.",
+    "sop": "TK018 — Sai lệch khoản note trong FUND"
+  },
+  {
+    "id": "TC-KT-04",
+    "nhom": "Kế toán",
+    "market": "Indonesia",
+    "gip": "GIPIN 30",
+    "msg": "Chị ơi chốt quỹ tháng này em thấy sai so với file đối soát, bị nhầm tên GIP. Nhờ GIP xử lý gấp.",
+    "cap": 2,
+    "picDVKH": "Nguyễn Khánh Linh",
+    "picPhongBan": "Trương Hương Giang (KT - ID) + Nguyễn Thảo Ly (DVKH Lead)",
+    "notif": [
+      "Kế toán",
+      "DVKH Lead"
+    ],
+    "sla": "4 giờ (T+0)",
+    "output": "[Cấp 2 — Chốt quỹ nhầm GIP] Tiếp nhận bằng chứng từ KH. KT ID kiểm tra lại. Đính chính + cập nhật file fund đúng GIP. Thông báo cho KH sau khi xử lý. Thông báo: KT ID + DVKH Lead.",
+    "sop": "TK012 — KH phản hồi chốt quỹ nhầm"
+  },
+  {
+    "id": "TC-KT-05",
+    "nhom": "Kế toán",
+    "market": "Philippines",
+    "gip": "GIP 15",
+    "msg": "Đây là lần thứ 3 bên GIP báo delay giấy tờ công ty của em. 6 tháng rồi vẫn chưa xong, bên em đã tốn hơn 100tr. GIP cần giải quyết ngay hôm nay.",
+    "cap": 3,
+    "picDVKH": "Nguyễn Thảo Ly",
+    "picPhongBan": "BLĐ + Phạm Phương Trà (KT - PH) + Nguyễn Thảo Ly (DVKH Lead)",
+    "notif": [
+      "Kế toán",
+      "DVKH Lead",
+      "Ban Lãnh Đạo",
+      "Kinh doanh"
+    ],
+    "sla": "1 giờ — Escalate ngay",
+    "output": "[Cấp 3 — Pháp lý + KH tức giận] Escalate ngay lên BLĐ. Xin lỗi + cam kết ngày cụ thể. DVKH Lead + KT phải có mặt xử lý. Push Kế toán pháp lý báo tiến độ rõ ràng. Thông báo: BLĐ + KT PH + Kinh doanh.",
+    "sop": "TK021 — Giấy tờ pháp lý delay"
+  },
+  {
+    "id": "TC-TLS-01",
+    "nhom": "Telesales",
+    "market": "Philippines",
+    "gip": "GIP 114",
+    "msg": "Tháng này tỷ lệ xác nhận data của em chỉ đạt 40%, tụt giảm nhiều so với tháng trước. Nhờ GIP check lại.",
+    "cap": 1,
+    "picDVKH": "Hoàng Minh Quân",
+    "picPhongBan": "Nguyễn Thị Ánh (TLS - PH) + Hoàng Thị Minh Ngọc (TP TLS)",
+    "notif": [
+      "Telesales"
+    ],
+    "sla": "4 giờ (T+0)",
+    "output": "[Cấp 1 — Tỷ lệ xác nhận thấp] Lấy báo cáo tỷ lệ xác nhận từ DVKH x TLS Ticket Report. Báo TP Telesales rà soát data + callscript. Assign: Nguyễn Thị Ánh. Thông báo: Group TLS PH.",
+    "sop": "TLS Ticket — Tỷ lệ xác nhận đơn"
+  },
+  {
+    "id": "TC-TLS-02",
+    "nhom": "Telesales",
+    "market": "Philippines",
+    "gip": "GIP 283",
+    "msg": "Team telesales GIP gọi cho khách hàng của em sai giờ (10pm local time) và khách hàng phàn nàn. Đây không phải lần đầu.",
+    "cap": 2,
+    "picDVKH": "Hoàng Minh Quân",
+    "picPhongBan": "Hoàng Thị Minh Ngọc (TP TLS) + Đặng Thanh Bình (TLS Admin)",
+    "notif": [
+      "Telesales",
+      "DVKH Lead"
+    ],
+    "sla": "2 giờ",
+    "output": "[Cấp 2 — Vi phạm quy trình TLS] Ghi nhận khiếu nại. Báo TP TLS kiểm tra lịch gọi + nhân sự. Rà soát log gọi. Yêu cầu TLS giải trình + cam kết. Thông báo: TP TLS + DVKH Lead.",
+    "sop": "TLS — Quy trình gọi + giờ gọi chuẩn"
+  },
+  {
+    "id": "TC-TLS-03",
+    "nhom": "Telesales",
+    "market": "Indonesia",
+    "gip": "GIPIN 22",
+    "msg": "Em muốn scale telesales lên 300 đơn/ngày từ tháng sau. GIP có đủ nhân lực không?",
+    "cap": 1,
+    "picDVKH": "Hoàng Minh Quân",
+    "picPhongBan": "Nguyễn Huyền Anh (TLS - ID) + Hoàng Thị Minh Ngọc (TP TLS)",
+    "notif": [
+      "Telesales",
+      "Kinh doanh"
+    ],
+    "sla": "24 giờ (T+1)",
+    "output": "[Cấp 1 — Yêu cầu scale TLS] Báo TP TLS đánh giá năng lực hiện tại. Kinh doanh xác nhận gói dịch vụ. Lên kế hoạch nhân sự. Assign: Nguyễn Huyền Anh. Thông báo: TLS ID + Kinh doanh.",
+    "sop": "TLS — Đào tạo và scale up"
+  },
+  {
+    "id": "TC-CSR-01",
+    "nhom": "CSR",
+    "market": "Thailand",
+    "gip": "GIPTL 22",
+    "msg": "Bên em có nhiều buyer Thái phàn nàn trên page Facebook là chưa nhận được hàng sau 7 ngày. Nhờ GIP support gọi check lý do.",
+    "cap": 1,
+    "picDVKH": "Nguyễn Khánh Linh",
+    "picPhongBan": "Lộc Thị Hành (CSR - TL) + Cao Kỳ (Vận đơn - TL)",
+    "notif": [
+      "CSR",
+      "Vận đơn"
+    ],
+    "sla": "4 giờ (T+0)",
+    "output": "[Cấp 1 — CSR gọi kiểm hoàn] CSR TL gọi lại buyer theo danh sách KH cung cấp. Tổng hợp lý do + báo KH. Nếu nghi ngờ lỗi ĐVVC: báo Vận đơn. Assign: Lộc Thị Hành. Thông báo: CSR TL + Vận đơn TL.",
+    "sop": "TK044 — Gọi hoàn kiểm tra lý do"
+  },
+  {
+    "id": "TC-CSR-02",
+    "nhom": "CSR",
+    "market": "Malaysia",
+    "gip": "GIPML 46",
+    "msg": "Em cần GIP hỗ trợ gọi lại những đơn hoàn để research lý do hoàn, giúp em tối ưu chỉ số.",
+    "cap": 1,
+    "picDVKH": "Nguyễn Khánh Linh",
+    "picPhongBan": "Đào Diệu Linh (CSR - MY)",
+    "notif": [
+      "CSR"
+    ],
+    "sla": "24 giờ (T+1)",
+    "output": "[Cấp 1 — Research hoàn] Tổng hợp danh sách hoàn KH cung cấp. CSR MY gọi lại buyer. Tạo báo cáo lý do hoàn. Gửi KH file kết quả. Assign: Đào Diệu Linh. Thông báo: Group CSR MY.",
+    "sop": "TK041 — KH hỏi lý do hoàn theo SP"
+  },
+  {
+    "id": "TC-DVKH-01",
+    "nhom": "DVKH",
+    "market": "Philippines",
+    "gip": "GIP 85",
+    "msg": "Chị Ly ơi, em muốn lên lịch họp hàng tháng cho tháng này. Bên em sẵn sàng từ thứ 3 tuần tới.",
+    "cap": 1,
+    "picDVKH": "Nguyễn Khánh Linh",
+    "picPhongBan": "Nguyễn Thảo Ly (DVKH Lead)",
+    "notif": [
+      "DVKH Lead"
+    ],
+    "sla": "24 giờ (T+1 — trước mùng 7)",
+    "output": "[Cấp 1 — Lịch họp tháng] Confirm lịch họp, gửi thông báo theo template. Chuẩn bị slide báo cáo vận hành KH. Lưu lịch họp vào bảng tracking. Assign: DVKH Lead (Nguyễn Thảo Ly). Thông báo: DVKH Lead.",
+    "sop": "QT Họp KH hàng tháng — Bước 2-4"
+  },
+  {
+    "id": "TC-DVKH-02",
+    "nhom": "DVKH",
+    "market": "Indonesia",
+    "gip": "GIPIN 34",
+    "msg": "Em có lô hàng mới sẽ về kho vào ngày mai. Em đã điền bảng kế hoạch nhập hàng rồi.",
+    "cap": 1,
+    "picDVKH": "Ngô Thị Phương Linh",
+    "picPhongBan": "Lê Phương Dung (Kho - ID)",
+    "notif": [
+      "Kho",
+      "Vận đơn"
+    ],
+    "sla": "30 phút",
+    "output": "[Cấp 1 — Kế hoạch nhập hàng] Xác nhận đã nhận bảng KHNH. Báo Kho ID chuẩn bị tiếp nhận. Nhắc KH dán GIPxxx bên ngoài kiện. Assign: Lê Phương Dung. Thông báo: Kho ID + Vận đơn.",
+    "sop": "QT Nhận TT nhập hàng mới — Bước 1-2"
+  },
+  {
+    "id": "TC-C3-01",
+    "nhom": "DVKH",
+    "market": "Philippines",
+    "gip": "GIP 169",
+    "msg": "GIP không đáp ứng được SLA và chất lượng dịch vụ quá tệ. Tháng này nếu không cải thiện em sẽ chuyển sang fulfillment khác. Em đã bị ảnh hưởng trực tiếp tài chính.",
+    "cap": 3,
+    "picDVKH": "Vũ Nguyễn Phương An",
+    "picPhongBan": "Nguyễn Thảo Ly (DVKH Lead) + Hoàng Nguyễn Thanh Tùng (Kinh doanh)",
+    "notif": [
+      "DVKH Lead",
+      "Ban Lãnh Đạo",
+      "Kinh doanh"
+    ],
+    "sla": "1 giờ — Escalate ngay",
+    "output": "[Cấp 3 — Dọa churn] Escalate ngay BLĐ + DVKH Lead + Kinh doanh. Gọi điện trực tiếp cho KH trong 30 phút. Yêu cầu KH liệt kê các vấn đề cụ thể. Lên kế hoạch cải thiện bằng văn bản. Thông báo: BLĐ + Kinh doanh + DVKH Lead.",
+    "sop": "SOP B01c — Khiếu nại cấp 3"
+  },
+  {
+    "id": "TC-C3-02",
+    "nhom": "Kho",
+    "market": "Philippines",
+    "gip": "GIP 113",
+    "msg": "Kho GIP đang thiếu 150 sản phẩm của em mà không có giải thích. Đây là thiệt hại tài chính lớn. Em yêu cầu bồi thường ngay.",
+    "cap": 3,
+    "picDVKH": "Nguyễn Thảo Ly",
+    "picPhongBan": "Đặng Hồng Khánh (TP Kho) + Nguyễn Thảo Ly (DVKH Lead) + BLĐ",
+    "notif": [
+      "Kho",
+      "Kế toán",
+      "DVKH Lead",
+      "Ban Lãnh Đạo"
+    ],
+    "sla": "2 giờ",
+    "output": "[Cấp 3 — Mất hàng số lượng lớn] Escalate BLĐ + TP Kho ngay. Yêu cầu kiểm kê khẩn cấp. Thu thập video + biên bản. Xác định trách nhiệm (Kho/ĐVVC). KT tính phí bồi thường. Thông báo: Kho PH + KT PH + DVKH Lead + BLĐ.",
+    "sop": "SOP B01c + QT Kiểm kê — Chênh lệch tồn kho"
+  },
+  {
+    "id": "TC-C3-03",
+    "nhom": "Kế toán",
+    "market": "Philippines",
+    "gip": "GIP 196",
+    "msg": "Em kiểm tra lại 3 tháng gần đây và phát hiện phí dịch vụ GIP tính sai công thức cho em. Tổng chênh lệch hơn 20 triệu. Em cần giải quyết ngay.",
+    "cap": 3,
+    "picDVKH": "Lê Quyết Chiến",
+    "picPhongBan": "Phạm Phương Trà (KT - PH) + Nguyễn Thảo Ly (DVKH Lead) + BLĐ",
+    "notif": [
+      "Kế toán",
+      "DVKH Lead",
+      "Ban Lãnh Đạo"
+    ],
+    "sla": "2 giờ — Họp gấp",
+    "output": "[Cấp 3 — Tranh chấp phí dịch vụ] Escalate BLĐ + KT + DVKH Lead ngay. Yêu cầu KH cung cấp bằng chứng (file đối soát 3 tháng). KT rà soát lại công thức tính phí. Nếu có sai lệch: hoàn tiền + xin lỗi chính thức. Thông báo: KT PH + BLĐ + DVKH Lead.",
+    "sop": "SOP B01c — Khiếu nại tài chính cấp 3"
+  }
+]
